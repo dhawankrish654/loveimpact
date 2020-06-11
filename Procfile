@@ -1,1 +1,1 @@
-web: gunicorn ebizz.wsgi--log-file -
+web: gunicorn ebizz.wsgi --log-file -
