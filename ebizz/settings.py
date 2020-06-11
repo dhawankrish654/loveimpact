@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['loveimpact.herokuapp.com','www.loveimpact.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin','shop','phonenumber_field','bootstrap4',
+    'django.contrib.admin','shop','phonenumber_field',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
