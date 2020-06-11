@@ -1,0 +1,1583 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>IMPACT BY *{{z.firstname}}*</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<SCRIPT LANGUAGE="JavaScript">
+
+function CopyToClipboard(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    reload();
+    alert("Text has been copied, now paste in the text-area")
+  }
+}
+
+</SCRIPT>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+        <img src="/media/{{z.pic}}" style="width:100%" alt="*{{z.firstname}}*">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+
+          </div>
+          <center>
+            <h2>*{{z.firstname}}*</h2></center>
+        </div>
+        <div class="w3-container">
+
+          <br><br><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{z.email}}</p>
+          <br><br><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>{{z.phone}}</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>LINKS</b></p>
+
+          <br><br><a href="{{z.whtsapp}}">-<img src="data:image/png;base64,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" width=20  alt="">Join Whatsapp Group</a><br><br></p>
+
+
+
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+
+          </div>
+
+
+          <br><br>
+
+          <br><br>        </div>
+      </div><br><br>
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>IMPACT EXPERIENCE</h2>
+
+          <h5 class="w3-opacity"><b>IMPACT ADVANTAGES</b></h5>
+          <div id="div1" class="w3-container">
+
+            नमस्ते।<br><br>
+
+            यह मैसेज मिशन इम्पैक्ट सपोर्ट की ओर से है।<br><br> आप इस नंबर को इम्पैक्ट सपोर्ट के नाम से सेव कर ले।<br><br><br>
+
+
+            हम समय समय पर आपको आवश्यक मैसज/सूचनाएं देंगे जो आपको आपका बिज़नेस बढ़ाने में मदद करेगा।<br><br>
+
+          <b>कृपया इस मैसेज /नंबर पर रिप्लाई न करे।</b><br><br>
+
+            हम आपको फ़ास्ट ग्रोथ पैकेज के मैसेज / फ़ोटो व् अन्य मटेरियल्स भेज रहे है जिनका उपयोग करके आप अपने बिज़नेस को कम मेहनत में बढ़ा पाएंगे।<br><br>
+
+            सभी मटेरियल्स को सेव कर ले।<br><br> इसका सही तरह से बैक अप रख ले।<br><br> अगर किसी कारण आपका फोन फॉर्मेट हो गया, या व्हाट्स एप डिलीट हो गया, तो आपको यह सारे मटेरियल्स दोबारा नहीं मिल सकेंगे।<br><br>
+
+            <br><br><br>आप चाहे तो फेसबुक पर पोस्ट अपने आई.डी. से कर सकते है।<br><br> इससे फेसबुक पर यह हमेशा मिलेंगे।<br><br>
+          </div>
+        <br><br><button id="button1" onclick="CopyToClipboard('div1')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+                  <hr>
+        <div id="div2" class="w3-container">
+          <h5 class="w3-opacity"><b><br><br><a</b></h5>
+
+            <br><br>इम्पैक्ट परिवार में आपका स्वागत है।<br><br> समय निकालकर इस मैसेज को ध्यान से पढ़े, और इसमें दिए हुए सभी लिंक
+    को ध्यानपूर्वक देखें।<br><br> अगर आपके पास यरफ़ोन हो, तो वीडियो देखते समय उसे लगा ले।<br><br> <br><br>
+    आपके इम्पैक्ट एकाउंट में लॉगिन करने के लिए इस लिंक पर क्लिक करे।<br><br>
+    www.iloveimpact.com/<br><br>
+    <br><br>आपके इम्पैक्ट एकाउंट का इंटरफेस को सही तरह से समझने के लिए, निचे दिया गया वीडियो ज़रूर देखे,<br><br>
+    https://www.youtube.com/watch?v=oBs6ox0Psso<br><br>
+
+    <br><br>पॉवर पैकेज से जॉइनिंग करके आपने समझदारी पूर्वक काम किया।<br><br> क्योंकि इसमें आपको सफल करने के लिए जो
+    मार्केटिंग टूल्स दिया जाता है, उनका लगातार उपयोग करते रहने से आप बहोत ही कम मेहनत और समय में
+    सफल हो सकते हो।<br><br> आपके पॉवर वेबपेज लिंक मे बिज़नेस की जानकारी के अलावा, आपका मोबाईल नंबर, नाम
+
+    वगैरह भी है जिससे लोग आपसे संपर्क कर सके।<br><br> इसके अलावा लोग घर बैठे ऑनलाइन पेमेंट कर सकेंगे आपके
+    इसी पॉवर वेबपेज से, अपने डेबिट कार्ड, क्रेडिट कार्ड या नेटबैंकिंग द्वारा।<br><br> आपके पॉवर वेबपेज लिंक नीचे है, <br><br>
+    Joining link: 
+<a href="{{z.joininglink}}">{{z.joininglink}}</a>
+     <br><br>
+    पॉवर पैकेज से दुसरो को जॉइन करने की सलाह दे ताकि वे कम मेहनत से सफल हो सके।<br><br> ज़्यादातर लोग पॉवर
+    पैकेज से जॉइन करके, रेडीमेड मार्केटिंग सिस्टम का यूज़ करके तेज़ी से नए लोगो को टीम में शामिल करके नए
+    अचीवमेंट कर लेते है।<br><br> आपको इसमें पूरा बिज़नेस वॉल्यूम भी मिलता है।<br><br> पॉवर पैकेज के फायदे जानने के लिए
+    निचे दिए गए वीडियो को देखे।<br><br><br>
+    <a href="https://www.youtube.com/watch?v=h9lTYbPnSFs">https://www.youtube.com/watch?v=h9lTYbPnSFs</a><br><br>
+    आपके इम्पैक्ट बिज़नेस का ट्रेलर वीडियो निचे दिए गए लिंक में है।<br><br> इसमें आपका नाम, आपकी तस्वीर और
+    आपका मोबाईल नंबर पहले से रखा हुआ है।<br><br> इससे लोग वीडियो देखकर आपको सीधा संपर्क कर पाएंगे और आपका
+    बिज़नेस बढ़ेगा।<<br><br>
+    <a href="{{z.youtube1}}"></a>{{z.youtube1}}<br><br>
+    और यह आपका पर्सनल वैल्यूमार्ट ओप्पोरच्युनिटी वीडियो भी ज़रूर देखे ,<br><br>
+    <a href="{{z.youtube2}}"></a>{{z.youtube2}}<br><br>
+    हमारे फेसबुक पेज को देखे और लाइक करे,<br><br>
+    <a href="www.facebook.com/joinmissionimpact/">www.facebook.com/joinmissionimpact/</a><br><br><br>
+    भविष्य में किसी और जानकारी के लिए हमारे ईमेल अड्रेस पर संपर्क करे।<br><br> support@iloveimpact.com<br><br>
+    हम इम्पैक्ट बिज़नेस में आपकी सफलता की कामना करते है।<br><br><br>
+
+    *इम्पैक्ट टीम*
+    <!-- End Right Column -->
+    </div>
+    <br><br><button id="button1" onclick="CopyToClipboard('div2')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+    <hr>
+
+    <div id="w80" class="w3-container">
+      <h5 class="w3-opacity"><b></b></h5>
+      <br><br>
+        Aapne Mission Impact ka information maanga tha.<br><br>
+
+        Mera naam *{{z.firstname}}* ke naam se save kar lijiye.<br><br>
+
+        Niche diye gaye 2 videos, earphones lagaakar dhyan se sune.<br><br>
+
+
+        7 din tak group me jo message aaye, unhe padhte rahe.<br><br>
+
+        Koi question aapke mann me badme ho to phone par discuss kar lenge.<br><br>
+
+        Website me baaki details aapko mil jayenge, pura padhe, ����<br><br>
+
+        www.iloveimpact.com/hindi<br><br>
+<br><br>
+        Agar aap join karte hai to mai pura support karunga.<br><br>
+<br><br>
+        ✈️✈️✈️Mai pehle bhi IMPACT karta tha, ab bhi IMPACT karta hu, aur aage bhi sirf IMPACT
+        karunga.✈️✈️✈️
+<br><br>
+        Videos dekh lijiye ����
+
+
+
+</div><button id="button1" onclick="CopyToClipboard('w80')"><a href="javascript:history.go(0)">Click to copy</a></button>
+    <hr>
+    <div id="w4" class="w3-container">
+      <h5 class="w3-opacity"><b> </b></h5>
+      <br><br>JOIN INDIA’S FASTEST GROWING BUSINESS- IMPACT!!!
+
+<br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+<br><br>*{{z.firstname}}: {{z.phone}}*</p>
+
+
+    </div>
+    <br><br><br><button id="button1" onclick="CopyToClipboard('w4')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+    <hr>
+    <div id="w5" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+      <h5 class="w3-opacity"><b> </b></h5>
+      <br><br>VALUEMART BUSINESS OPPORTUNITY!!!
+
+<br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br><br><br>*{{z.firstname}}:{{z.phone}}*</p>
+
+<br><br>    </div>
+    <br><br><button id="button1" onclick="CopyToClipboard('w5')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+    <hr>
+
+    <div id="w6" class="w3-container">
+
+      <br><br>*खर्च में से इनकम करो।*<br><br>
+
+मिशन इम्पैक्ट का भाग बनकर अगले 12 महीनो में 6 लाख से 10 लाख रूपए कमाओ।<br><br>
+ऑनलाइन बिज़नेस - घर से काम करके पुरे देश में अपना बिज़नेस फैलाओ।<br><br>
+अधिक जानकारी के लिए निचे दिए गए वीडियो यरफ़ोन लगाकर देखें,<br><br>
+मिशन इम्पैक्ट ट्रेलर,<br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+वैल्युमार्ट बिज़नेस ऑनलाइन करियर,<br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br>CALL *{{z.phone}}* for details!</p>
+
+<br><br>    </div>
+    <br><br><button id="button1" onclick="CopyToClipboard('w6')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+    <hr>
+    <div id="w7" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+      <h5 class="w3-opacity"><b> </b></h5>
+      <br><br>*अगर आप मिठाई कहीं पर रख दो तो चींटियों को बुलाना नहीं पड़ता। उनकी पूरी फ़ौज अपने आप ही आ जातीहै।*
+
+इम्पैक्ट का जोइनिंग पैकेज ही कुछ ऐसा है के सब आसानी से मल्टिपल आई.डी. से जोइनिंग भी करते है और<br><br>आगे मेहनत भी करते है।<br><br> ऐसा ज़ोरदार जोइनिंग पैकेज + कॉन्सेप्ट + कॉम्पेन्सेशन प्लान + मार्केटिंग सपोर्ट कही<br><br>ं
+और मिले, तो हमें ज़रूर बताए।<br><br>
+<br><br>*RUNNING SUCCESSFULLY SINCE 4 YEARS*<br><br>
+<br><br>7000 + 10000 + 25000 का फायदा सिर्फ 4300 रुपए में।<br><br>
+<br><br>फ़ास्ट ग्रोथ पैकेज - 4300 रुपए | 3000 BV | वैल्यूमार्ट डिस्काउंट क्रेडिट 20000 रुपए | 7000 के<br><br>प्रोडक्ट्स/सर्विसिस
+
+<br><br>आपको मिलेगा 20 प्रोडक्ट्स और सर्विसिस<br><br>
+���� Tuver/Arhar Dal (1 Kg) - 95 Rs������<br><br>
+
+���� Masoor Dal (1 Kg) - 80 Rs����<br><br>���� Moong Dal (1 Kg) - 65 Rs����<br><br>
+���� Kabuli Chana (1 Kg) - 90 Rs����<br><br>���� Basmati Rice (5 Kg) - 400 Rs
+���� Sugar (2 Kg) - 74 Rs����<br><br><br>���� TATA AGNI Tea 1 Kg - 220 Rs <br><br>
+���� Suhana Biriyani Masala - 40 Rs<br><br>
+
+���� Toothbrush (4 pc) - 100 Rs<br><br>���� Hing (100 gms) - 70 Rs����<br><br>
+���� Dabur Toothpaste (200 gms) - 225 Rs���� <br><br>
+���� Park Avenue Deo - 300 Rs <br><br>���� Navratna Namkeen 1 Kg - 200 Rs<br><br> 
+
+�� Singhav Namak (1 Kg) - 100 Rs��<br><br>���� Mukhwas (250gms x 4) - 600 Rs<br><br>
+�� Til (100 gms) - 15 Rs ����<br><br>
+�� Rock Salt (1 Kg) - 100 Rs<br><br>
+���� 2 Warming cum Cooling Bag – 700 Rs ������<br><br>
+���� 4 Massager - 600 Rs ������<br><br>
+���� Business Building images worth 2000 Rs����<br><br>
+���� Power Webpage worth 10000 Rs<br><br>
+���� 2 Personal Brand Videos worth 15000 Rs<br><br>
+���� Personal Brand eBook worth 200 Rs<br><br>
+*3000 BV*<br><br>
+2000 + 200 + 200 + 74 + 170 + 220 + 40 + 100 + 70 + 130 + 200 + 200 + 50 + 50 + 40 + 15 + 50 +<br><br>15 + 2100 + 200 + 200 + 500 + 300 = 6800 Rs <br><br>
+6800 Rs के प्रोडक्ट्स सिर्फ 4300 Rs में।<br><br> मतलब 2700 Rs का सीधा फायदा।<br><br><br></p>
+<br><br>
+
+      <br><br>ऐसा पैसा वसूल ऑफर कोई हाथ से जाने नहीं देता।<br><br> एक भी जॉइनिंग नहीं लगाओगे तब भी वैल्यूमार्ट डिस्काउंट
+क्रेडिट द्वारा आपको 10000 रुपए का डिस्काउंट लाभ मिलेगा।<br><br> मान लीजिए बाजार में कोई प्रोडक्ट अगर 100
+रुपए किलो है, और अगर वॅल्युमार्ट से अगर आपको वही प्रोडक्ट 85 रुपए में मिल जाए, तो आपको 15 रुपए मिले
+ना ? *इस प्रकार आपको 10000 रुपये पक्के मिलेंगे।<br><br>
+<br><br>आपने कुछ भी नया नहीं किया।<br><br> केवल अपने रोज़मर्रा की चीज़े लेने की दुकान बदली।<br><br> वो इसलिए क्योंकि नई
+दुकान पर लाभ ज़्यादा था।<br><br> और देखते ही देखते आप 50000 से 60000 रूपए कमाने लग गए।<br><br> ऐसा सिर्फ
+इम्पैक्ट में होता है।<br><br> जी हाँ, यहां आप आर्थिक स्वतंत्रता पा सकते है।<br><br> अपने अधूरे सपनो को बहोत ही जल्द पूरा कर
+सकते है।<br><br>
+<br><br>आपकी सफलता का ट्रेलर खुद देख लीजिए।<br><br>
+<br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br><br>
+<br><br>VALUEMART OPPORTUNITY VIDEO
+
+<br><br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br><br>हर महीने का खरीद आज तक पैसे देकर करते थे।<br><br> लेकिन अगर राशन फ्री में आ जाए तो ???
+
+<br><br>अगर 6 लोग आपके साथ जुड़ते है, और आप खुद अगर एक बिज़नेस साइकल में हर कोई 8000 BV का काम
+करते है, तो आपके पहले महीने की इनकम होगी 15760 रुपए।<br><br>
+
+<br><br>हो गया न घर का राशन फ्री।<br><br> अलग से पैसे भी मिले।<br><br> मज़ा आया?!!! यह तो ट्रेलर है।<br><br> पिक्चर अभी बाकी है।<br><br>
+
+<br><br>अगले महीने अगर आपके 6 दोस्तों से भी रहा न गया, और अगर वे बिज़नेस में चार लोगो को लाते है, तो 24
+लोग नए आए और पुराने 7 लोग, याने कुल 31 लोगो की टीम।<br><br> अगर हर कोई 8000 BV का काम करता है तो
+आपके अगले महीने की इनकम होगी 56880 रुपए।<br><br>
+
+
+<br><br>2 महीनो में 50000 की इनकम पर पहोंच गए।<br><br> 6 महीने भी लग जाए तो क्या बुरा है ???
+नौकरी कितने सालो से कर रहे हो।<br><br> 15 साल।<br><br> 25 साल से।<br><br> अब तक क्या वहां से 50000 रुपए कमा पाए ? फिर
+भी कोई शिकायत किये बिना हर रोज़ 10 से 12 घंटे मेहनत करते हो ना ? क्या अगले 10 साल और नौकरी कर
+लेने से भी 50000 रुपए की इनकम पर पहुंच जाओगे ? एक बार 3 से 6 महीना इम्पैक्ट बिज़नेस में काम करके
+देखो।<br><br>
+
+<br><br>ऐसा पैकेज मिल जाए तो कोई भी जंग जीत सकता है।<br><br> हमेशा के लिए नेटवर्क मार्केटिंग में करियर सेट हो सकता
+है।<br><br> हर कोई ख़ुशी ख़ुशी स्वीकार कर रहा है इस जोइनिंग पैकेज को।<br><br> क्रेडिट कार्ड या डेबिट कार्ड या नेटबैंकिंग से
+तुरंत भुगतान करे और जॉइन करे।<br><br>
+<br><br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+<br><br>यहाँ तक अगर बात समझ आई हो, और अगले 6 महीनो के अंदर 50000 रूपए/महीना, अगले 12 महीनो में 6
+लाख से 15 लाख की इनकम, और अगले 3 साल में 2 करोड़ से 5 करोड़ की इनकम कमाना चाहते है, तो संपर्क
+करे।<br><br>
+<br><br><br>*{{z.firstname}} : {{z.phone}}*
+<br><br>*TO STOP RECEIVING MESSAGE REPLY STOP*
+मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br>
+
+<br><br>What’s App Group: <br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+वेबसाइट पूरा पढ़े,
+<br><br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+<br><br></div>
+<br><br>
+<br><br><button id="button1" onclick="CopyToClipboard('w7')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+
+
+
+
+
+
+<div id="w9" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <h5> </h5>
+  <br><br>मैंने 10000 Rs सोने में लगाया।<br><br> एक साल बाद 11000 Rs मिला।<br><br>
+
+<br><br>मैंने 250 Rs का फोन रिचार्ज करवाया।<br><br> मुझे 250 Rs का बेलेंस मिला।<br><br>
+
+<br><br>मैंने 10000 Rs बैंक में रखे।<br><br> मुझे एक साल बाद 10500 Rs मिले।<br><br>
+
+<br><br>मैं 25000 Rs प्रीमियम जीवन बीमा पॉलिसी में 20 सालो तक भरता रहा।<br><br> 20 साल बाद 6% रिटर्न के साथ
+मैच्योरिटी का पैसा मिला।<br><br>
+
+<br><br>मैंने सिर्फ 4500 Rs इम्पैक्ट वैल्यूमार्ट में भरा।<br><br> मुझे एक साल में 20000 रुपए मिल गए।<br><br>
+
+<br><br>तुरंत 7000 के प्रोडक्ट्स और गिफ्ट्स भी मिल गए।<br><br>
+
+<br><br>तमैंने बहोत से प्लान देखे।<br><br> लेकिन इम्पैक्ट के सिस्टम जैसा और कुछ नहीं देखा।<br><br> यही भविष्य का लीगल बिज़नेस
+है।<br><br>
+
+<br><br>तऐसा फायदा होता देख मैंने कुछ दोस्तों को बताया और ताकि उन्हें भी इसका लाभ मिले।<br><br> उन्होंने भी इस योजना
+का फायदा उठाया।<br><br> मेरा फायदा कई गुना बढ़ गया और मुझे कंपनी से पैसा आने लगा।<br><br>
+
+<br><br>तजिनमे गुण कम होता है, उन्हें बाहरी दिखावा करके दुसरो को आकर्षित करना पड़ता है।<br><br> जो इस तरह से आकर्षित
+होकर फँसा, उसका जीवन अक्सर खराब हो जाता है।<br><br>
+
+<br><br>तदूसरी ओर, जिनमे गुण होता है, उन्हें बाहरी दिखावा करने की ज़रूरत नहीं होती।<br><br>
+
+<br><br>*तरूप नहीं, गुण देखो, और सही की पहचान करो।*<br><br>
+<br><br>तइम्पैक्ट किट पाकर लीडर्स कहते है मज़ा आ गया, घर भर दिया इम्पैक्ट ने।<br><br> 18 Products in just 3600 Rs.
+YOU GET
+
+<br><br>तTuver Dal (1 Kg) | Moong Dal (1 Kg) | Masoor Dal (1 Kg) | Sugar 4 Kg | Kanhaiya Aata 5 Kg |
+Dabur Toothpaste 200 gms | Suhana Biriyani Masala | Tata Agni Tea 1 Kg | Navratna Namkeen
+1 kg | 2 Warming cum Cooling Bag | 4 Massager | Park Avenue Perfume | Hing (100 gms) |
+Suhana Paneer Tikka Masala | Ramdev Mirchi (200 gms) | Ramdev Dhaniya (200gms) | Til (100
+gms) | Jeera (200 gms) | Sarso (200 gms) | 5 Amritdhara | Premium Mukhwas (200 gms x 3) |
+*2000 BV*
+
+<br><br>तमिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br>
+<br><br>What’s App Group: <br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+
+<br><br>तशार्ट में बताना चाहूंगा कि आप अगले 2 महीनो में कैसे 50000 रुपए कमा सकते है।<br><br>
+
+<br><br>तपहला महीना: अगर 6 लोग आपसे जुड़ते है और हर कोई 8000 बिज़नेस वॉल्यूम करता है तो आपके पहले महीने
+की इनकम हो जाती है 15760 Rs.
+
+������������������
+
+<br><br>तदूसरा महीना : अगर 6 लोगो के साथ केवल 4 नए लोग जुड़ते है तो आपके अगले महीने की टीम हो जाती है 31
+लोगो की।<br><br> अगर हर कोई 8000 बिज़नेस वॉल्यूम करता है तो आपके पहले महीने की इनकम हो जाती है 56880
+Rs.<br><br></p>
+<br><br>
+
+
+
+
+
+
+
+  <br><br>जॉइनिंग लिंक : <br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+
+<br><br>इससे आसान बिज़नेस, कांसेप्ट, सपोर्ट, कम्पेन्सेशन प्लान, और मार्केटिंग सिस्टम नहीं मिलेगा।<br><br> अगर मिल जाए तो
+कृपया संपर्क करके हमें बताए।<br><br>
+
+<br><br>अब आपको सफल होने से कोई रोक नहीं सकता।<br><br> सिवाय आपके।<br><br>
+
+<br><br>Impact business introduction,
+<br><br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+
+<br><br>Common man success Presentation,
+<br><br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br>
+<br><br>Website: <br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+<br><br><br>*{{z.firstname}}:{{z.phone}}*
+<br><br>*TO STOP RECEIVING MESSAGE REPLY STOP*</p>
+<br><br>
+</div>
+
+<br><br><button id="button1" onclick="CopyToClipboard('w9')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+
+
+<div  id="w11" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br><br>एक बार एक फेन्स (मेडा) पर तीन बिल्लियाँ बैठी हुई थी।<br><br> उसमे से दो बिल्लियों ने कहा के &quot;मै कूद जाऊंगी!!!&quot;
+
+तो बताइए अब फेन्स पर कितनी बिल्लियाँ रह गई है ?
+
+<br><br>उत्तर है के अब भी फेन्स पर तीन ही बिल्लियाँ है।<br><br>
+
+<br><br>*सिर्फ कह देने मात्र से यह सिद्ध नहीं हो जाता के बिल्लियाँ कूद ही गई होंगी। जीवन में ज़्यादातर लोग इन्ही बिल्लियों की
+तरह है जो संकल्प या बड़ी बड़ी बातें तो करते है, पर अपने सपनो को हासिल करने के लिए काम नहीं करते।*<br><br>
+
+<br><br>आप इम्पैक्ट बिज़नेस देखते हो।<br><br> आपको बहोत ही अच्छा लगता है।<br><br> महसूस भी होता है के अब करियर सेट,
+सफलता पक्की।<br><br>
+
+हो।<br><br> इससे अच्छा कॉन्सेप्ट आपको कहीं और नहीं मिलता।<br><br>
+<br><br>आपको मन में कुछ प्रश्न होते है।<br><br> वह आप फोन पर क्लियर भी कर लेते हो।<br><br> आप पूरी तरह संतुष्ट भी हो जाते
+
+<br><br>लेकिन फिर वक्त गुज़रता रहता है।<br><br> हर चीज़ वक़्त में खो जाता है।<br><br> इम्पैक्ट बिज़नेस एक बेहतरीन मौका है।<br><br> लेकिन
+आपने पहल नहीं की तो वह भी वक़्त में खो जाएगा।<br><br>
+
+<br><br>आप आज एक अच्छी पिक्चर देखते है।<br><br> बहोत मनोरंजन होता है।<br><br> लेकिन क्या 2 दिन बाद आपको वह याद रहता
+है ? नहीं ना ?
+
+<br><br>उसी तरह से इम्पैक्ट बिज़नेस देखने के बाद सब सही लगे, तो हर हाल में उसे तुरंत शुरू करे।<br><br> कहीं वक़्त ज़्यादा
+बीत गया, तो उत्साह ख़त्म हो जाएगा।<br><br> भूल जाओगे इस अच्छे मौके को।<br><br> *एक बार अच्छा मौका चला जाए, तो
+फिर खराब मौके ही रह जाते है।*<br><br>
+
+<br><br>इस वेबसाइट में शक्ति है आपके जीवन को बदलने की।<br><br> ख़ास तौर पर नेटवर्कर्स की।<br><br> पूरा नीचे तक पढ़े।<br><br>
+<br><br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+
+<br><br><br><br>*{{z.firstname}} : {{z.phone}}*
+<br><br></p>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w11')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w12" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>*IMPACT SUCCESS PLAN HINDI*
+
+<br><br>Best Plan in Industry | DAILY NEED PRODUCTS | HIGH BUSINESS VOLUME |
+FASTEST GROWING MLM
+
+<br><br>Best Compensation Plan in Industry on turnover! Compare with any company.
+
+
+<br><br>Easy to succeed with team!
+<br><br>Impact Business Plan PDF in Hindi. Please study ������
+
+<br><br>For Hindi plan in website, check
+
+<br><br>www.iloveimpact.com/income-plan</p>
+<br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w12')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div class="w3-container" id="w13"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>*IMPACT BUSINESS PLAN VIDEOS*
+<br><br><a href="https://www.iloveimpact.com/business-plan-videos/">https://www.iloveimpact.com/business-plan-videos</a><br><br></p>
+<br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w13')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+
+
+
+<div id="w14" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>इम्पैक्ट बिज़नेस प्लान एकदम सरल भाषा में पढ़े।<br><br> कोई पॉइंट न समझ आए तो संपर्क करे *{{z.phone}}* पर।<br><br>
+    <br><br>
+<br><br>https://www.iloveimpact.com/income-plan/</p>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w14')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w15" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>*सही नेटवर्क मार्केटिंग कंपनी का चुनाव कैसे करे*
+<br><br>    <br><br>सबसे महत्वपूर्ण और ज़रूरी सवाल - जो हर नेटवर्कर के मन में चिंता पैदा करती है।
+अजय (जो एक हताश नेटवर्कर) - मै कैसे पता करू के कौनसी कंपनी सही है ??? हर कंपनी अपने आप को नम्बर 1 कहती है।>
+*हर कंपनी में लीडर की इनकम दिखाते है। कार अचीवर्स दिखाते है। कंपनी के बड़े बड़े सर्टिफिकेट दिखाते है। प्रोडक्ट रिसल्ट
+भी दिखाते है। लेकिन मैने ऐसे बहोत सी कंपनी करके देख ली। कई साल मेहनत कर लिया। करियर तो मेरा नहीं बना।<br><br>
+*कंपनी तो बहोत बड़ी हो गई। लेकिन मै वहीं का वहीं रह गया ??? मेरा टाइम और पैसा वेस्ट हो गया। मेरा करियर खराब हो
+गया। हर कंपनी में यही हुआ मेरे साथ।*<br><br>
+<br><br>आखिर सही कंपनी का चुनाव कैसे करुँ ??? प्लीज़ गाईड करें।<br><br> अब विश्वास उठ गया है एम्.एल.एम्. से।<br><br>
+प्रकाश (एक अनुभवी नेटवर्कर) - सही कंपनी का चुनाव करने के लिए सिर्फ 3 स्टेप फॉलो करे।<br><br> किसी आम इंसान को सामने
+<br><br>बिठाए और उसे चुनाव करने दे।<br><br> उसके सामने 10 कंपनीओ की प्रेसेंटेशन रखे।<br><br>
+उसमे केवल आपको उसे यह बताना है कि *अगर वो 5000 रूपए पहले कंपनी में भरे तो प्रोडक्ट्स क्या मिलेंगे, दूसरे कंपनी में
+यह प्रोडक्ट्स मिलेंगे, तीसरे में यह।* इस तरह 10 कंपनियों में प्रोडक्ट्स क्या मिलेंगे उसे यह बताए।<br><br> यह पहला स्टेप है।<br><br>
+<br><br>देखिए वह कौनसी कंपनी पसंद करता है।<br><br>
+*उसके बाद उसे यह समझाए कि उन सभी कंपनियों में 5000 रुपए जो उसने प्रोडक्ट्स के लिए भरे, उसके सामने उसे
+बिज़नेस वॉल्यूम क्या मिलेगा।*<br><br> ठीक है ? 10 कंपनियों का बिज़नेस वॉल्यूम उसके सामने रखे।<br><br> यह दूसरा स्टेप है।<br><br> देखिए वह
+<br><br>कौनसी कंपनी पसंद करता है।<br><br>
+*फिर उसे समझाए कि अगर वह टीम बनाता है और 300000 या 500000 रुपए का टर्नओवर करता है कंपनी में, तो
+उसका पेआउट/कमीशन पहली कंपनी में कितना बनेगा? दूसरे में कितना ? ऐसे 10 कंपनियों में पेआउट समझाए।*<br><br> यह
+<br><br>तीसरा स्टेप है।<br><br> देखिए की अब वह कौनसी कंपनी पसंद करता है।<br><br>
+*ध्यान रहे - यह तीन स्टेप फॉलो करते समय, आपको किसी कंपनी के सर्टिफिकेट, या लीडर्स इनकम, या प्रोडक्ट रिसल्ट, या
+गाड़ी बँगले व् लाइफस्टाइल नहीं दिखाना है।*<br><br>
+इतना करने के बाद उसे चुनाव करने दीजिए।<br><br> देखिए वह कौनसी कंपनी का चुनाव करता है।<br><br> *तीनो स्टेप के पहलु समझने के
+बाद जो कंपनी यह आम आदमी पसंद करे, वही कंपनी आपके करियर के लिए, और सभी के करियर के लिए सही रहेगा।*<br><br> आप
+<br><br>*उसी कंपनी में करियर बनाइए।*<br><br> आप भी ज़रूर सफल होंगे।<br><br>
+अजय (सोचते हुए) - मेरे जटिल प्रश्न का उत्तर आपने बिलकुल सरलता से दे दिया।<br><br> मुझे समझ आ गया है।<br><br> आज तक बड़ी बड़ी
+बातें और कंपनी के बखान सुनकर निर्णय लेता रहा।<br><br> *कुछ चंद लीडरों की इनकम देखकर गलत फैसला करता रहा।*<br><br> भरे हुए
+पैसो के बदले फ़ूड सप्लीमेंट्स और महंगे प्रोडक्ट्स बेचता रहा।<br><br> मेरे हज़ारो डिस्ट्रीब्यूटर्स की टीम हर बार टूट गई।<br><br> करियर
+<br><br>धराशयी हो गया।<br><br>
+प्रकाश - *ज़्यादातर लोग नेटवर्क मार्केटिंग में मेहनत करने के बाद भी इसलिए सफल नहीं हो पाते क्योंकि सभी कंपनियां
+रिक्रूटमेंट करते समय प्रोस्पेक्ट का ब्रेनवॉश करते है।*<br><br> *लीडर सबसे पहले इनकम दिखाकर प्रोस्पेक्ट को बेहोश कर देता है।*<br><br>
+उसकी बात की शुरुआत ही वहाँ से होती है।<br><br> उसके बाद कंपनी की बड़ी प्रोफ़ाइल दिखाई जाती है।<br><br> कुछ लीडर्स के गाडी, बँगले
+बताए जाते है।<br><br> साथ में प्रोडक्ट रिज़ल्ट्स।<br><br> भारत के लोग बहोत भोले होते है।<br><br> उन्हें स्टेज पर 5 लीडर दिखाई देते है हर मीटिंग
+में।<br><br> लेकिन दूसरी तरफ जो 500 लोग बैठे है, वे दिखाई नहीं देते।<br><br> 500 में 495 लोग क्यों स्टेज पर नहीं पहोंच पाए, यह प्रश्न
+उनके मन में कभी नहीं आता।<br><br> अगर प्रोडक्ट रिसल्ट किसी कंपनी के इतने ही अच्छे हो, तब तो हर चौराहे पर कंपनी की एक
+दूकान होती ना ??? साफ अक्षरों में लिखा होता - रिसल्ट ना मिले तो पैसे वापिस।<br><br> लेकिन ऐसा होता नहीं है।<br><br> बल्कि साफ़
+<br><br>शब्दों में लिखा होता है प्रोडक्ट के बोतल पर - यह किसी बीमारी ठीक करने के लिए नहीं है।<br><br>
+अजय (सोचते हुए) - आपने बिलकुल सही गाईड किया।<br><br> *अब समझ आ गया कि किसी भी कंपनी की बड़ी बड़ी बातें सुनकर
+करियर नहीं बनता।*<br><br> मै खुद कितने बड़े लीडरों से परिचित हूँ जो अपने कंपनी में एक समय पर डायमंड हुआ करते थे।<br><br>
+200000 लोगो की टीम थी उनकी।<br><br> लेकिन आज कहीं भी नहीं है मार्किट में।<br><br> ऐसे तो बहोत से लीडर्स है।<br><br> आपने जो 3 स्टेप
+बताए, वही सही है।<br><br> आम आदमी को 10 कंपनी के प्लान बताओ।<br><br> सिर्फ इतना समझाओ कि प्रोडक्ट क्या मिलेंगे, प्रोडक्ट के
+सामने बिज़नेस वॉल्यूम कितना मिलेगा, और आखिर में टीम बनाकर अगर 300000 से 500000 रूपए का टर्नओवर
+<br><br>दिया जाए, तो कमीशन कितना आएगा।<br><br> और जो कंपनी वह आम इंसान पसंद करे, वही कंपनी सही होगा।<br><br>
+प्रकाश - सही है।<br><br> यही सीधा तरीका है, बिना कोई ब्रेनवॉश किए।<br><br>
+<br><br>अजय - आपकी बात मुझे सही और सच्ची लगी।<br><br> मेरा दिमाग अब खुल गया है।<br><br> आपने मेरे प्रश्न का समाधान तो दे दिया।<br><br>
+लेकिन अगर आप सही रास्ता जानते है, तो मेरे प्रश्न का उत्तर भी ज़रूर जानते होंगे।<br><br> आप ही बता दीजिये, आम इंसान को
+<br><br>अगर 10 कंपनी के प्रेसेंटेशन दिखाकर, 3 स्टेप फॉलो करवाए, तो वह कौनसी पसंद करेगा जिसमे उसका करियर सेट हो???
+प्रकाश - *इम्पैक्ट।हमने करके भी देखा है।*<br><br> *और एक आम आदमी को नहीं, बल्कि 10 आम आदमियों को।*<br><br> *जिसमे कई
+नेटवर्कर भी थे।*<br><br> *इम्पैक्ट ही एक मात्र कंपनी है जो तीनो स्टेप में खरी उत्तरी।*<br><br>
+
+<br><br>अजय - तीनो स्टेप में आम आदमी इम्पैक्ट का चुनाव करेगा??? यह कैसे है ?
+प्रकाश - आप खुद कंपेर कर सकते है।<br><br> *इम्पैक्ट में अगर आप 5000 की खरीद करते है, तो वह बाकी सभी नेटवर्क मार्केटिंग
+कंपनियों से बेहतर सामान/प्रोडक्ट्स देता है।*<br><br> जैसे अरहर दाल, चना दाल, शक्कर, मसूर दाल, आटा, चावल, तेल, घी, साबुन
+इत्यादि।<br><br> नेशनल ब्रैंड के प्रोडक्ट्स भी है।<br><br> भारत की किसी और कंपनी में आप को इस तरह के प्रोडक्ट्स नहीं मिलेंगे।<br><br> हाँ, वहाँ
+<br><br>बड़ी बड़ी बातें बहोत सुनने मिलेगी।<br><br> पर बातों से न पेट भरता है, न बैंक बेलेंस बढ़ता है।<br><br>
+अजय - इम्पैक्ट के प्रोडक्ट्स पहले स्टेप में जो दे रही है, वह तो वाकई बढ़िया है।<br><br> ऐसे प्रोडक्ट्स तो मुझे किसी कंपनी में नहीं
+<br><br>मिला।<br><br>
+प्रकाश - वह तो ठीक है, प्रोडक्ट्स पर वैल्यू फॉर मनी है, *लेकिन साथ में इसके पैकेज में जो बिज़नेस वॉल्यूम है वह भी अन्य
+कंपनियों के मुकाबले ज़्यादा है।*<br><br> आप 5000 रूपए में जो प्रोडक्ट्स कहीं और से लोगे, उस पर वे जितना बिज़नेस वॉल्यूम
+देंगे, उससे कहीं ज़्यादा, इम्पैक्ट में घरेलु प्रोडक्ट्स पर मिल जाते है।<br><br> यह भी आप कंपेर कर सकते है।<br><br> दूसरे स्टेप में भी एक
+आम आदमी, इम्पैक्ट को ही पसंद करेगा।<br><br>
+<br><br>प्रकाश - क्या बात कर रहे है सर।<br><br> अगर ज़रूरी प्रोडक्ट्स मिल जाए तो टीम तो बनाना कोई मुश्किल काम नहीं है।<br><br> और साथ ही
+साथ अगर अच्छा बिज़नेस वॉल्यूम भी मिले, तो इससे बढ़िया बात तो कोई हो ही नहीं सकती।<br><br>
+<br><br>प्रकाश - सही कहा आपने।<br><br> *और तीसरी और सबसे महत्वपूर्ण बात।<br><br> करियर बनता है जब अच्छा पेआउट मिले, टीम के साथ
+<br><br>टर्नओवर देने पर।<br><br> उसमे भी अगर आप कंपेर करे तो फिर से इम्पैक्ट ही खरा उतरता है।*<br><br>
+
+<br><br>अजय - सर, मुझे इम्पैक्ट में पूरी दिलचस्पी है।<br><br> कृपया इसकी पूरी जानकारी दे।<br><br>
+
+<br><br>्रकाश - इस वेबसाइट को पूरा पढ़े और इसमें दिए गए सभी वीडियोस देखे।<br><br>
+
+<br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+
+पूरी जानकारी के लिए संपर्क करे *{{z.phone}}* पर।<br><br></p>
+<br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w15')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w16" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>क्यों इम्पैक्ट बिज़नेस ही आपके करियर के लिए सही है ?
+������������
+<br><br>भाइयों
+<br><br>बात शुरू करने से पहले आपको बता दू के मै आपका ब्रेनवॉश नहीं करूँगा।<br><br> मै अन्य लीडरों की तरह आपको दूसरे
+लोगो के आलिशान कार दिखाकर आपमें लोभ उत्पन्न नहीं करूँगा।<br><br> मै आपसे बड़ी बड़ी बातें नहीं करूँगा।<br><br> मै दूसरे
+लोगो की इनकम दिखाकर आपको बेहोश नहीं करूँगा।<br><br> मै आपको कंपनी के सर्टिफिकेट वगैरह दिखाकर आपको नहीं
+उलझाऊँगा।<br><br>
+<br><br>यही सब देखना हो तो दूसरी सभी कंपनिया बहोत अच्छे से दिखाएगी जिससे आपका ब्रेनवॉश हो जायेगा।<br><br> और
+आपका ध्यान प्लान और इनकम पर से हट जाएगा।<br><br> ऐसे लोग बड़ी बड़ी बातें तो करते है, लेकिन बैंक बैलेंस इनका
+छोटा ही रहता है।<br><br> और यह लोग बार बार कंपनिया बदलते रहते है।<br><br>
+
+<br><br>यह सब देखकर अगर लोग अमीर बन जाते तो इम्पैक्ट की रचना ना करनी पड़ती।<br><br>
+हम अगर नेटवर्क मार्केटिंग की बात करें तो भारत में यह उधोग 1998 से कार्यरत है।<br><br> आज तक दस हजार से
+ज़्यादा कम्पनियां मार्केट में डायरेक्ट सेलिंग के माध्यम से बिजनेस में आ चुकी है।<br><br> लेकिन आज 10000 नेटवर्कर
+में से 10 नेटवर्कर भी नहीं मिलते जो दिखा सके की वे पिछले 6 महीनो से 25000 रुपये/महीना भी कमा रहे हो।<br><br>
+<br><br>कंपनी की जय जयकार करने के बदले कोई कंपनी पैसे नहीं देती।<br><br> वो अपने प्लान के हिसाब से ही आपको पैसे
+देंगे।<br><br> बड़ी बड़ी मीटिंगों में चाहे कितनी भी हवा भर दे, लेकिन मार्किट में जूते नेटवर्कर को ही घिसना है।<br><br>
+<br><br>नेटवर्क मार्केटिंग लीडर्स आज तक एक बहोत ही बड़ी भूल करते आए है और इसकी भारी कीमत भी चुकाई है।<br><br>
+लीडर्स और आम नेटवर्कर्स हमेशा कंपनी का नेतृत्व करते है।<br><br> जबकि उन्हें ज़रूरत है अपने टीम की नेतृत्व करने
+की।<br><br>
+
+<br><br>जो इम्पैक्ट को अन्य कंपनी की श्रेणी का सोचेगा, वो बड़ा अभागा होगा।<br><br> इसलिए ठीक से जान लो इम्पैक्ट क्या है।<br><br>
+<br><br>तो आइए समझते है इम्पैक्ट ही क्यों आपके करियर के लिए सही है।<br><br>
+*RUNNING SUCCESSFULLY SINCE 4 YEARS*
+<br><br>- बिज़नेस केवल 100 रुपए से हर आम आदमी शुरू कर सकता है।<br><br> यानिकि हिंदुस्तान का हर नागरिक चाहे गरीब
+हो या अमीर, अपने सपने पुरे कर सकता है।<br><br> पैसिव इनकम कमा सकता है।<br><br>
+<br><br>- एक रूपए का भी कमीशन हो तो कंपनी ट्रांसफर कर देती है सीधे एकाउंट में।<br><br>
+- यह बिज़नेस केवल नेटवर्कर के लिए नहीं, यह हर ग्राहक के लिए है।<br><br> मतलब आप यह बिज़नेस अपने पडोसी को
+<br><br>भी दिखाकर उसे फायदा पहोंचा सकते है।<br><br>
+- इस बिज़नेस में मंदी असर नहीं करेगी।<br><br> दाल, आटा, शक़्कर, तेल, चावल, चाय, साबुन, शैम्पू, इत्यादि हर परिवार की
+<br><br>ज़रूरत है।<br><br> इसे हर महीने लेना ही लेना है।<br><br>
+- इससे सस्ता नहीं मिलेगा।<br><br> कंपनी के सिस्टम से अगर आप चलते है तो आप पाएंगे कि प्रोडक्ट्स की कीमत
+बहोत ही कम हो जाती है।<br><br> विस्तार से समझने के लिए अपने अपलाइन से संपर्क करे।<br><br>
+<br><br>- प्रोडक्ट्स नेशनल ब्रैंड्स के ही मिलते है जिसकी एड हम टी.वी. पर देखते है।<br><br> जैसे टाटा, नेस्ले, पतंजलि,
+<br><br>आई.टी.सी., हिंदुस्तान लिवर, डाबर वगैरह।<br><br>
+- कस्टमर बहोत ही आसानी से बनते है क्योंकि नेशनल ब्रैंड का ही सामान डिस्काउंट पर मिल जाता है।<br><br> किसी
+<br><br>ग्राहक का ब्रैंड बदलवाने की, या टेढ़ी-मेढ़ी बातो में उलझाकर दूसरे ब्रैंड के महंगे प्रोडक्ट्स दिलवाने की ज़रूरत नहीं।<br><br>
+- प्रोडक्ट्स सही मूल्य पर।<br><br> आज आप पाएंगे कि बहोत सी कंपनिया मार्किट में कोई प्रोडक्ट जिस दाम पर मिल
+रहा है उससे 130% से 250% तक मूल्य लेते है।<br><br> उदाहरण के तौर पर अगर रसोई तेल 100 रूपए लीटर मार्किट
+में मिल रहा है तो कंपनी उसका 130 रूपए से लेकर 200 रूपए लीटर तक बेच रही है।<br><br> आज अगर आप फेसवॉश
+80 रूपए का यूज़ कर रहे है तो यह आपको 160 रूपए का अन्य ब्रैंड का बेचेंगे।<br><br> ऐसे में लोग खुद महँगा प्रोडक्ट
+लेते है और दुसरो को दिलवाते है।<br><br> याने दाम बढाकर डिस्ट्रीब्यूटर को कमीशन मिलता है और कंपनी अपना जेब
+<br><br>भरती है।<br><br> आपके कस्टमर्स ऐसे में आपसे एक दो बार तो शर्म में ले लेंगे, लेकिन बादमे लेना बंद कर देंगे।<br><br> और
+घाटा आपका और आपके करियर का होगा।<br><br> दूसरी और इम्पैक्ट में नेशनल ब्रैंड के प्रोडक्ट्स सही मूल्य पर मिलते
+है।<br><br> उस पर 5% से 50% डिस्काउंट भी आपको अलग से मिलेगा।<br><br>
+<br><br>- भारत का नंबर 1 जॉइनिंग पैकेज।<br><br> लोग आसानी से आप से जुड़ेंगे और आपका टीम तेज़ी से बढ़ेगा।<br><br> आप अगर
+किसी और कंपनी में जॉइनिंग करते है या सामान लेते है, तो आपको क्या मिलता है ? *और इम्पैक्ट में क्या
+मिलता है, यह खुद जांच करे।*<br><br> 10 कंपनी के जॉइनिंग पैकेज किसी आम आदमी के सामने रखिए, वो इम्पैक्ट के
+<br><br>जॉइनिंग पैकेज को ही पसंद करेगा।<br><br> हम और आप समझदार है।<br><br>
+- सबसे बढ़िया रिपर्चेस पैकेज।<br><br> जॉइनिंग और रिपर्चेस दोनों अपने आप मिलते रहेंगे।<br><br> आकर्षक लाभ और बिज़नेस
+वॉल्यूम मिलता रहता है।<br><br> इसलिए बार बार इनकम होता रहता है और बढ़ता भी रहता है।<br><br> अन्य कंपनियों में हैल्थ
+के प्रोडक्ट्स ही मिलते है जो परिवार की पहली ज़रूरत नहीं है।<br><br> जबकि इम्पैक्ट के प्रोडक्ट्स पहली आवश्यकता है।<br><br>
+<br><br>इसलिए हर व्यक्ति जो जुड़ेगा वो रिपर्चेस भी करेगा।<br><br>
+- बिज़नेस प्लान को आप अपने पसंद की कोई भी 4 - 5 कंपनियों से कंपेर कर लीजिए।<br><br> देखिए, ठीक से जाँच
+कीजिए की अगर किसी और कंपनी में 5000, या 50000 या 250000 का काम करने पर कितना इनकम होगा,
+और वही काम इम्पैक्ट में करने से क्या इनकम होगा।<br><br> तब आप इम्पैक्ट की अहमियत समझ पाएँगे।<br><br> और आपको
+<br><br>साफ़ दिखाई देगा कि किसी अन्य कंपनी में ज़्यादा काम करके कम इनकम कमाना समझदारी नहीं है।<br><br>
+- सबसे बढ़िया मार्केटिंग सपोर्ट।<br><br> इम्पैक्ट आपको देती है 25000 रुपए से अधिक के रेडीमेड मार्केटिंग टूल्स अगर
+<br><br>आप पॉवर पैकेज से जॉइन करते है।<br><br> जितनी अच्छी मार्केटिंग सपोर्ट होगी उतनी आसानी से आप सफल हो सकेंगे।<br><br>
+- पर्सनल ब्रैंड वीडियो - इम्पैक्ट पॉवर पैकेज में आपको आपके नाम, फोटो और मोबाईल नंबर सहित आपको आपका
+पर्सनल ब्रैंड वीडियो देती है।<br><br> इसे केवल सोशियल मिडिया पर शेर करने से आपको ढेर सारी इन्क्वयरी मिलती है।<br><br>
+जिसे केवल इन्फॉर्मेशन देकर आप अपना बिज़नेस बढ़ा सकते है।<br><br> बहोत ही कम मेहनत में ज़्यादा जल्दी सफल हो
+सकते है।<br><br> आज अगर आप अपने शहर में किसी विडिओ मेकर से जाकर पूछेंगे कि एक मिनट का विडिओ क्या रेट
+से मिलेगा, तो वो आपको 2500 रुपए से लेकर 7500 रुपए का चार्ज बताएगा।<br><br> यहाँ रेडीमेड मिल जाता है आपको।<br><br>
+<br><br>आपको बिज़नेस बढ़ाना है और पैसे कमाना है।<br><br>
+- पर्सनल वेब लिंक - आपको आपका पर्सनल वेबसाइट पेज भी मिलता है जिसके द्वारा भारत भर से लोग आपकी
+<br><br>टीम में शामिल हो सकते है।<br><br> इस पेज पर से लोग अपने डैबिट कार्ड, या क्रेडिट कार्ड, या नेट बैंकिंग द्वारा पेमेंट
+करके आपके टीम में शामिल हो सकते है।<br><br> आज किसी वेबसाइट को बनाने का खर्च 5000 से 25000 रूपए तक
+होता है, लेकिन उससे भी महत्वपूर्ण बात है कि उसे चालू रखने के लिए होस्टिंग चार्ज हर साल 1500 रुपए से
+लेकर 2500 रूपए तक होता ही है।<br><br> यह हर साल भरना होता है अगर आपने अपनी वेबसाइट बनवाई है तो।<br><br> जबकि
+<br><br>इम्पैक्ट पॉवर पैकेज में यह पहले से शामिल है।<br><br>
+- डाइरेक्ट आप जब भी किसी को प्लान दिखाकर जोड़ते है तो आपको उसका 10% मिलता है।<br><br> यह लोग बादमे
+जब भी रिपर्चेस करेंगे तब तब आपको 10% मिलता रहता है।<br><br> मान लीजिए आपने इम्पैक्ट बिज़नेस की शुरुआत
+कि, और तीन महीनो में 100 लोगो को प्लान दिखाकर जॉइन करवाया।<br><br> अगर यह सभी अगले महीने 5000
+बिज़नेस वॉल्यूम का काम करते है तो आपका टोटल बिज़नेस हुआ 500000 बिज़नेस वॉल्यूम का।<br><br> इसका 10%
+को-स्पॉन्सर रॉयल्टी आपको मिलेगा, यानी 50000 रुपए।<br><br>
+<br><br>- पूरा कमीशन डिस्ट्रीब्यूटर्स में बाँट दिया जाता है।<br><br> अन्य कंपनियों में आप पाएंगे की कार फंड, हॉउस फंड, ट्रेवल
+फंड का पैसा तब तक डिस्ट्रीब्यूटर को नहीं मिलता जब तक वो कार ले न ले, मकान न ले ले, घूमने न जाए।<br><br>
+<br><br>- कंपनी बिज़नेस वॉल्यूम का 74% बाँट देती है।<br><br>
+- कंपनी पेड़ हॉलिडे वेकेशन ट्रिप्स समय समय पर मिलता है।<br><br> वह भी केवल 100000 से 150000 बिज़नेस
+<br><br>वॉल्यूम के टर्नओवर पर।<br><br> अन्य कंपनीओ में वेकेशन ट्रिप्स 500000 से 1000000 के बिज़नेस पर मिलता है।<br><br>
+<br><br>- केवल डाउनलाईन ही नहीं, आपको आपके क्रॉस लाइन के किए बिज़नेस से भी लाभ मिलता है।<br><br>
+<br><br>- पूल इनकम द्वारा आपको आपके अपलाइन लीडर के इनकम से भी फायदा हो सकता है।<br><br>
+- नेटवर्क मार्केटिंग इंडस्ट्री में जितनी बड़ी कम्पनी हैं वो सब अपने पीक पॉइंट पर चल रही हैं जबकि इम्पैक्ट अभी
+सिर्फ तीन साल का बच्चा है।<br><br> इसका पीक पॉइंट आना बाकी है।<br><br> अन्य कम्पनियों में अगर आप जाएंगे तो आप भीड़
+में खो जाएंगे जबकि इम्पैक्ट में भीड़ आपके पीछे आने का इंतजार कर रही है।<br><br> अन्य कंपनियों की खामियों को
+<br><br>सुधारकर इसकी रचना हुई है।<br><br>
+- इम्पैक्ट में घर के लिए आवश्यक सामान वही ब्रैंड का मिल जाता है।<br><br> इसलिए यहाँ इन्वेस्टमेंट नहीं होता।<br><br> फिर
+भी इसे अगर निवेश के तौर पर सोचे तब भी फायदा है।<br><br> मान लीजिए आप 3600 रूपए बैंक में रखे, या गोल्ड में,
+<br><br>या जीवन बीमा पॉलिसी में, या शेर में, या किसी म्युचुअल फंड में, तो आपको एक साल बाद क्या रिटर्न मिलेगा।<br><br>
+3600 रूपए के सामने शायद 4000 रूपए।<br><br> जबकि इम्पैक्ट बिज़नेस में आपको वैल्यूमार्ट वाऊचर के द्वारा 10000
+रूपए का लाभ मिलता है।<br><br> आपको बिज़नेस वॉल्यूम भी मिलता है।<br><br> तो यहाँ पर सेविंग्स करने से, और दुसरो को
+<br><br>सेविंग्स करवाकर आप हर महीने 50000 रूपए या उससे भी अधिक कमा सकते है।<br><br>
+- आपको मीटिंग में पेट्रोल जलाकर और सपशयल समय देकर बिज़नेस बिल्ड करने के लिए खर्च करने की ज़रूरत
+नहीं है।<br><br> फोन कॉन्फ्रेंस हमेशा चलता रहता है।<br><br> आप और आपके गेस्ट घर बैठे अपने फोन पर इसे अटेंड करके
+जानकारी ले सकते है।<br><br> अपने मोबाईल से डायल करे *0172 519 9269*।<br><br> आपसे एक्सेस कोड माँगा जाएगा।<br><br> डायल
+करे *943727#*।<br><br> फिर से *#* दबाए।<br><br> और आप मोबाईल कॉन्फरन्स में शामिल हो जाएंगे।<br><br> 
+<br><br><br>MISSION IMPACT मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br>
+<br><br>What’s App Group: <br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+<br><br><br><br>*{{z.firstname}}*<br><br>
+<br><br>*IMPACT BUSINESS POWER NETWORKER*
+<br><br>{{z.phone}}
+<br><br>*TO STOP RECEIVING MESSAGE REPLY STOP*</p>
+<br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w16')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w17" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br><br>मीनाक्षी : हाई कविता। कहाँ घूमकर आई ?
+<br><br>कविता : अरे मीनाक्षी। कहाँ खोई हुई हो आजकल।काफी टाइम बाद मिले। मै ज़रा घर के लिए कुछ ज़रूरी सामान
+लेने गई थी। मुझे स्पेश्यल डिस्काउंट्स मिलते है वैल्यूमार्ट से सामान लेने पर।
+<br>मीनाक्षी : अच्छा ? तूने यह तुवर दाल कितने में लिया।<br><br>
+कविता : 70 रूपए किलो।मीनाक्षी : वोट!!! मै तो कल ही 80 रूपए किलो लाई। और यह मैगी ?><br><br>कविता : 58 रूपए।मीनाक्षी : क्या ? पर इसकी कीमत तो 68 रुपए है न ?<br><br>कविता : हाँ। दूसरे दुकानों पर तो 68 Rs का मिलेगा। लेकिन मै इम्पैक्ट में ऑथोराइज़्ड डिस्ट्रीब्यूशन पार्टनर हूँ।
+और मैंने यहाँ से वैल्यूमार्ट वाऊचर लिया है। *इसलिए वैल्यूमार्ट स्टोर से मुझे वो डिस्काउंट्स मिलते है जो दूसरे
+किसी मॉल या दूकान पर भी नहीं मिलता। ग्रोसरी, एफ.एम्.सी.जी., आयुर्वेद और पुजापा के सामान पर 5% से
+50% का डिस्काउंट मिलता है।* वैल्यूमार्ट से सस्ता कहीं नहीं मिलेगा। मैंने दूसरे सभी जगहों से कंपेर किया है।
+<br><br>मीनाक्षी : अच्छा।<br><br>कविता : साथ ही साथ अभी मै घर से काम करके पुरे इंडिया में अपना बिज़नेस फैला रही हूँ। हर महीने मुझे
+25000 से 30000 रूपए की इनकम आराम से हो जाती है। आज बहोत से ग्राहक मेरी टीम में जुड़े है। *वे भी
+दूसरे ग्राहकों को जोड़ते रहते है। इससे मुझे इनकम होती है। आज मेरी टीम में से कोई सूरत में रोटी खाए, या
+मुंबई में पूजा के समय अगरबत्ती यूज़ करे। मुझे पैसा मिलता है। मेरी टीम में कोई बरोडा में कपडे धोए या
+>राजकोट में चावल पकाए, मुझे इनकम मिलती है।*><br><br>मीनाक्षी : वाऊ।कमाल का सिस्टम है।मुझे भी ऐसा कुछ करना है।यह तो हर कोई कर सकता है।मुझे करना
+क्या होगा ?<br><br>कविता : कुछ नहीं।*चलते फिरते सबको प्रमोशन कर देना है की वैल्यूमार्ट जैसा फायदा कहीं और नहीं मिलेगा।*>
+बस।लोग जुड़ते जाते है और इनकम होती रहती है।*कंपनी रेडीमेड ऑनलाइन सिस्टम देती है जिससे घर बैठे हर
+व्यक्ति पुरे भारत में अपना बिज़नेस बिल्ड करके पैसे कमा सकते है।*तुझे डिटेल में समझना हो तो यह दो
+विडिओ देख ले यरफ़ोन लगाकर।<br><br>
+
+<br><br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+
+<br><br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br><br>मीनाक्षी : वाउ। वीडियो तो सुपर्ब है।ऐसा बिज़नेस तो आज तक नहीं देखा।*कुछ भी नया नहीं करना है।*और
+इतना सारा फायदा।मुझे अभी स्टार्ट करना है।मुझे भी ऐसी वीडियो मिलेगी क्या मेरे डिटेल्स के साथ।
+कविता : हाँ।बस लोगो को विडिओ दिखाओ और पैसे कमाओ। वेबसाईट भी देख ले।<br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+<br><br>मीनाक्षी : वेबसाईट तो बहोत ही बढ़िया है। मुझे सब समझ आ गया। मै पक्का इसमें 3 महीना काम करुँगी। बता
+जॉइन कहाँ से करू?<br><br>कविता : यह रहा जॉइनिंग लिंक, कोई भी पैकेज सीलेक्ट कर और रजिस्ट्रेशन पूरी कर।<br><br>
+<br><br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+<br><br>Call *{{z.phone}}*</p>
+<br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w17')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w18" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br>    *अमीरो के पास अमीर बनने के हज़ारो रास्ते है।** लेकिन गरीबों और मिडल क्लास के अमीर बनने के लिए एक ही
+    रास्ता - मिशन इम्पैक्ट।*
+        आपने इम्पैक्ट बिज़नेस देख और समझ भी लिया। पर अब आगे क्या करना है???
+    यह तो आप ही को सोचना होगा। *निर्णय और उस निर्णय का परिणाम आप ही का होगा।*
+        निर्णय लेने में हम आपकी थोड़ी सी ही मदद कर सकते है।
+        तो ध्यान से सोचे। इम्पैक्ट बिज़नेस में आपको दुनिया का सबसे बेस्ट जॉइनिंग पैकेज मिल गया। *क्या इससे
+    अच्छा रिपर्चेस/जॉइनिंग पैकेज है आपके पास ?*<br><br>
+        इम्पैक्ट बिज़नेस में आपको दुनिया का सबसे बेस्ट कंपेनसेशन प्लान मिल गया। *क्या इससे अच्छा कंपेनसेशन
+    इम्पैक्ट बिज़नेस में आपको दुनिया का सबसे बेस्ट टेक्नोलॉजी युक्त मार्केटिंग सपोर्ट मिल गया। क्या इससे अच्छा
+    प्लान है आपके पास ?* अगर है तो कृपया हमें भी बताए।<br><br>
+    मार्केटिंग सपोर्ट मिला आपको कहीं ? यह आपको बहोत ही कम मेहनत में 50000 रुपए की इनकम तक पहुंचने में
+    मदद करता है। *ऐसा सपोर्ट और किसी कंपनी में नहीं मिलेगा।*<br><br>
+        आज दूसरे कंपनियों के लीडर्स और अन्य नेटवर्कर्स इम्पैक्ट से हाथ मिला रहे है। *आख़िरकार आपको पैसा कमाना
+    है और इससे अच्छा लॉन्ग टर्म सिस्टम तो मिलने से रहा।*<br><br>
+
+        *अच्छे दिन बैठे रहने से नहीं आते है।उन्हें पाने के लिए बुरे दिनों से लड़ना पड़ता है।*
+    फिर भी आप सोच रहे है। कोई बात नहीं, हम आपकी थोड़ी सी मदद कर देते है।<br><br>
+
+        सोचिये आप और क्या करेंगे ? सोचिए, सोचिये ?<br><br>
+    ट्रेडिशनल बिज़नेस किया तो लाखो का इन्वेस्टमेंट पहले करोगे। 12 घंटे हर रोज़ व्यस्त हो जाओगे। सही है न ?
+    रोज़ सुबह 8 बजे से शाम के 8 बजे तक लगे रहो। पूरे हफ्ते में शायद एक दिन भी छुट्टी न मिले। दुकान बंध
+    रखकर माल भी लेने जाना पडता है। *और ज़्यादातर बिज़नेस 2 -3 साल में चौपट भी हो जाता है।* नुकसान के
+    साथ। और नोटबॅंधी और जी.एस.टी. लागू होने के बाद तो व्यापारिओं की हालत बहोत ख़राब है। क्या हिम्मत जुटा
+    पा रहे है बिज़नेस करने का? शायद नहीं।<br><br>
+        अगर बिज़नेस ठीक ठाक चला भी तब भी 20 साल से लेकर 60 साल तक फँसे रहना होगा। *ब्लड प्रेशर,
+    डाइबिटीस, स्ट्रेस, मोटापा, कमर और घुटने का दर्द 35 साल से होने लगेगा।*
+    <br><br>    नौकरी किया तब भी यही होगा। पूरी ज़िंदगी एक छोटी सी सैलेरी पर काम करते रहना होगा। हर महीने
+    कोम्प्रोमाईज़ करके जीते है नौकरी करने वाले। *महीना ख़त्म होने से बहोत पहले उनके पैसे ख़त्म हो जाते है।*
+    कई लोग नौकरी के साथ साथ शाम को ट्यूशन या पार्ट टाइम जॉब करते है। और बहोत से अन्य लोगो को नौकरी
+    के शिफ्ट बदलते हुए काम करना पड़ता है। कभी दिन में सोते है तो कभी रात में। शरीर अलग से ख़राब हो रहा है
+    धीरे धीरे।<br><br>
+        मान लीजिये आप जीवन बीमा एजेंट बन गए। तो भी आज कल कोई पॉलिसी लेता नहीं है। टारगेट पुरे होंगे नहीं,
+    मेहनत करते करते थक जाओगे। तो यह काम तो रहने ही दो।<br><br>
+
+    <br><br>    जनरल इंश्योरेंस/मेडिक्लेम बेचने का काम किया तब भी यही होगा। जल्दी कोई सेट नहीं होता इनमे।
+    तो बचा क्या ? जी हाँ। नेटवर्क मार्केटिंग। लेकिन यहाँ तो बहोत बड़ी गड़बड़ है। *20 साल हो गए भारत में नेटवर्क
+    मार्केटिंग को लेकिन आज 10000 नेटवर्कर में से 10 नेटवर्कर भी ऐसे नहीं मिलते जो आपको दिखा सके कि वे
+    पिछले 6 महीनो से 25000 रुपये भी हर महीने कमा पा रहे है करियर तो बनता ही नहीं है।*<br><br>
+        *जो पुराने लीडर है जो अपने कंपनी में कभी डायमंड हुआ करते थे, जिनकी टीम होती थी 25000 से 50000 लोगो
+    <br><br>    की, आज उनकी इनकम भी जीरो है।* *98% कंपनिया तो बंध हो जाती है।*<br><br>
+    और जो चल रही है उनमे आपको बिना डॉक्टरी के हेल्थ प्रोडक्ट्स बेचने होंगे।<br><br> *जो तेल बाजार में 100 रुपए लीटर
+    बिक रहा है वही यहाँ 140 रुपये से लेकर 195 रुपये लीटर मिल रहा है।*<br><br> तो आपका दोस्त, आपके जीजाजी आपकी
+    शरम में 2 बार ले भी लेंगे, पर तीसरी बार नहीं।<br><br> *कोई भी व्यक्ति साबुन, टूथपेस्ट वगैरह के ज़्यादा पैसे क्यों देगा,
+        और कब तक देगा ? तो होगा यह कि आप टीम बनाएंगे और टीम टूट जाएगी।*<br><br> करियर सेट नहीं होगा।<br><br>
+    यही हुआ है और होता रहेगा हेल्थ और अन्य कंपनियों में काम करने वाले लीडर्स और नेटवर्कर्स के साथ।<br><br> थोड़ा
+    बहोत सामान वे और उनकी टीम बेच लेती है।<br><br> रिपीट ऑर्डर नहीं मिलता।<br><br> लोग 3 साल - 5 साल से लगे हुए है,
+    कंपनी की जय जयकार कर रहे है, अपने जेब से पैसा लगाकर बिज़नेस कर रहे है।<br><br> पर चैक ख़ास नहीं बन रहा।<br><br>
+    <br><br>    अरे हाँ।<br><br> आप फर्जी इन्वेस्टमेंट प्लान ज़रूर बेच सकते है।<br><br> आजकल कई कंपनी 7000 लगवाकर 24 महीनो में
+    35000 लौटा रही है।<br><br> आपको तो पता ही होगा।<br><br> ऐसी बहोत सी कंपनिया तो धीरे धीरे उठ गई, और जो थोड़े से
+    दिग्गज बचे है वे तब तक रहेंगे जब तक निचे जॉइनिंग आती रहेगी।<br><br> *और इस काम में और चोरी में ज़्यादा फर्क
+    नहीं है।*<br><br> आपने हमारा दूसरा पोस्ट पढ़ा होगा इन्वेस्टमेंट प्लान पर।<br><br> यह भी कुछ देर तक तो चलेगा, लेकिन जिस
+    दिन ताला लगा, उस दिन आप तो कहीं के नहीं रहोगे।<br><br> क्योंकि मेहनत करने की क्षमता तो बादमे रहेगी नहीं।<br><br> सही
+    बिज़नेस भी नहीं कर पाओगे।<br><br> *पैसा खर्च हो जायेगा और गुडविल भी गँवा बैठोगे।*<br><br> यही हुआ है अब तक ऐसे
+    लीडर्स के साथ।<br><br>
+    <br><br>    *कंपनिया बदलते रहने से बेहतर है एक जगह सुरक्षित नौकरी करो।*<br><br>
+    <br><br>    तो यहाँ रहकर और क्या करेंगे? क्यों न 3 से 6 महीना इम्पैक्ट ही करे।<br><br> सामान नेशनल ब्रैंड का मिल रहा है।<br><br> *और
+    हर महीने हर किसी को सामान लेना ही है।*<br><br> तो बहती गंगा में से पानी भरने से आसान क्या होगा।<br><br> खुद डिस्काउंट
+    <br><br>    पर लो, फायदा उठाओ।<br><br> ज़्यादा माल उठाओ और अपना फायदा और ज़्यादा बढ़ाओ।<br><br> सामान तो बिक जाता है
+    क्योंकि हर घर की ज़रूरत है।<br><br> आपको केवल पहुंचाना है।<br><br> टीम बना लो।<br><br> जोइनिंग और रिपर्चेस हर महीने होता
+    रहेगा।<br><br> ठीक है ना ???
+    <br><br>    इससे आसान तो और कोई काम नहीं है भारत में।<br><br> अगर है तो बताइये।<br><br> मेरा नंबर है {{z.phone}}.
+
+    <br><br>    जो वक्त बर्बाद करते है, वक्त उन्हें बर्बाद कर देता है।<br><br> इसलिए समय गँवाये बिना अपने कर्मो में जुट जाइए।<br><br>
+    6 महीने कर लो।<br><br> निष्ठा से।<br><br> श्रद्धा से।<br><br> *श्रद्धा न हो, विश्वास न हो, तो मत करो।*<br><br> छोटे से बच्चे को समझ आ
+    जाये यह बिज़नेस इतना सरल है।<br><br> लेकिन समझदारी दिखाई तो कुछ नहीं कर पाओगे।<br><br> सरल भाव का होना ज़्यादा
+    ज़रूरी है।<br><br>
+    <br><br>    *सिर्फ बिज़नेस का अच्छा होना काफी नहीं होता।<br><br> बिज़नेसमैन अच्छा हो यह ज़्यादा ज़रूरी है।*<br><br>
+    <br><br>    6 महीने बाद जानते है किस बात की संभावना है? वह होगा जो अब तक नहीं हुआ।<br><br> हर महीने ढेर सारा पैसा बैंक
+    <br><br>    एकाउंट में अपने आप आता रहेगा।<br><br>
+    घर में नई कार आ जाए शायद।<br><br> आप शायद अपने परिवार के साथ गोआ, ऊटी, श्रीनगर, नैनीताल, चार धाम यात्रा
+    कर ले 2 साल में ही।<br><br> क्योंकि आपके पास पैसा और समय दोनों होगा।<br><br> विदेश यात्रा भी हो जाएगी।<br><br> बच्चो को
+    अच्छी शिक्षा मिलेगी।<br><br> परिवार का भविष्य उज्जवल होगा।<br><br> अनिश्चितता और भय दूर हो जाएगी।<br><br> जीवन में शांति
+    का अनुभव होगा।<br><br> ईश्वर का ध्यान कर सकोगे।<br><br>
+    <br><br>    क्या करना है आपको ? सिर्फ श्रद्धा ही तो चाहिए।<br><br> बहोत बड़ी चीज़ है क्या? श्रद्धा को काटती है शंका।<br><br> और भय।<br><br>
+    और यह दोनों काल्पनिक होते है।<br><br> जी हाँ, आपके मन की कल्पना, और कुछ नहीं।<br><br>
+    <br><br>    यह समझ लीजिये दोस्त के आपके हर प्रश्न का जवाब मिल जाएगा।<br><br> लेकिन डर और शंका का कोई जवाब नहीं
+    होता।<br><br> इससे आपको खुद ही जूझना होगा।<br><br>
+    <br><br>    *जो डर गया। समझो मर गया।* *क्षणिक लाभ को छोडो। शाश्वत को अपनाओ।*<br><br>
+    <br><br>    *ज़िंदगी जीने में और गुज़ारने में बहोत फर्क होता है। तो एक बार फिर मौका ज़िंदगी दे रही है।*<br><br> इम्पैक्ट कर ही
+    लो।<br><br> यह रहा जॉइनिंग लिंक,
+    <br><br>    <br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+    <br><br>    डेबिट कार्ड तो होगा आपके पास? या क्रेडिट कार्ड? या फिर नेट बैंकिंग की सुविधा।<br><br> आप जैसे चाहे पेमेंट कर सकते
+    है।<br><br>
+    <br><br>    इतना करके आपको जिस किसीने यह बिज़नेस दिखाया है उसे संपर्क करके बता दो, ट्रांसेक्शन का रसीद उसे बता
+    दो।<br><br> और अपने सफलता की यात्रा शुरू करो।<br><br>
+    <br><br>    इतना सब इस लिए लिखा है ताकि आपका भविष्य उज्जवल हो।<br><br> *कोई बात बुरी लगी हो तो माफ़ी चाहते है।*<br><br>
+    <br><br>    CALL *{{z.phone}}* FOR SUPPORT!!!
+
+    *<br><br>TO STOP RECEIVING MESSAGE REPLY STOP*
+  </p>
+  <br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w18')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w19" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br><br>    *आप यह गलती न करे।*<br><br> ������
+    <br><br>    ज़रूरी मैसेज - ज़रूर पढ़े।<br><br> ����
+    <br><br>    कई लोग इम्पैक्ट बिज़नेस का फायदा इसलिए भी नहीं ले पाते क्योंकि अपनी जॉइनिंग लिए बिना ही वे दुसरो को समझाने
+    निकल पड़ते है।<br><br>
+    *जब कोई व्यक्ति इम्पैक्ट जॉइन करता है, तब उसे इम्पैक्ट सपोर्ट की ओर से ज़रूरी मार्गदर्शन मिलता है।<br><br> बहोत से मैसेजिस
+    और वीडियोस के माध्यम से नया डिस्ट्रीब्यूटर कंपनी के सिस्टम को सही तरह से समझ पाता है।<br><br> यह एक प्रक्रिया है जिसमे
+    समय लगता है।*<br><br>
+    <br><br>    मिशन इम्पैक्ट कोई रातों रात अमीर बनाने वाला सिस्टम नहीं है।<br><br> यह प्रॉपर प्रोडक्ट बेस प्लान है और सही तरह से सीखकर
+     बिज़नेस को बिल्ड करना पड़ता है।<br><br>
+    *नेटवर्क मार्केटिंग जुड़ने और जोड़ने का काम नहीं है।*<br><br> *यह सीखने और सीखाने का बिज़नेस है।*<br><br> *बिना सीखे आपको परिणाम
+    नहीं मिलेंगे।*<br><br>
+    �� पहले खुद जॉइन करें।<br> बिज़नेस को समझे।<br> बादमे धीरज रखते हुए काम करने से परिणाम मिलेंगे।<br><br>
+    इस बिज़नेस में किसी का नुकसान नहीं होता।<br> हालाँकि यह बात समझ लें की यहाँ हम प्रोडक्ट या घर का सामान देने के लिए
+    आपको बिज़नेस नहीं दिखाते।<br><br> *हम आपको आपके करियर के लिए भारत का सबसे बेस्ट मौका आपको दिखाते है।*<br><br> हम
+    आपको एक सुनहरा अवसर देते है, न की प्रोडक्ट्स।<br><br> प्रोडक्ट्स सिर्फ एक जरिया है।<br><br>
+    <br><br>    कंज़्यूमर्स प्रोडक्ट में इंटरस्ट लेते है।<br><br> *बिज़नेसमैन और नेटवर्कर्स का ध्यान हर हाल में इनकम पर होता है, बिज़नेस वॉल्यूम
+    पर होता है, कंपेनसेशन प्लान पर होता है, एक उज्जवल करियर के निर्माण में होता है।*<br><br>
+    <br><br>    अगर आप कंज़्यूमर माइंडसैट वाले व्यक्ति है तो अपने नज़दीक के परचून के दूकान/सुपरमार्केट से सामान लेते रहे जिस तरह
+    पिछले 30 - 40 साल से ले रहे है।<br><br>
+    <br><br>    *लेकिन अगर लाईफ में कुछ हटके करना है, अपनी पहचान बनानी है, हर महीने राशन फ्री में पाना हो, काम न करने पर भी
+    हर महीने पैसा बैंक एकाउंट में आता रहे उस तरह की आर्थिक स्वतंत्रता पाना हो, तो फिर आइये हम से हाथ मिलाइए। हम
+    आपको सफल बनाने के लिए कटीबद्ध है।*<br><br> ������������
+<br><br>    मै आपको सपोर्ट, गाइडेंस और सहयोग दूंगा।<br><br> कंपनी के रेडीमेड सिस्टम से घर बैठे काम करके आप पुरे देश में बिज़नेस फैला
+    सकेंगे।<br><br>
+    <br><br>    अंत में यही कहूँगा कि बिना जॉइन हुए किसी और को समझाने का प्रयास करेंगे, तो हो सकता है इतने अच्छे मौके से आप हाथ
+    धो बैठे।<br><br> बिज़नेस पर पहले आप खुद 100% विश्वास करे, जॉइन करे, सीखे, ट्रेनिंग ले, उसके बाद में प्रेसेंटेशन दे अपने
+    अपलाइन की हैल्प लेकर।<br><br>
+    <br><br>    *अगर डर लग रहा हो, या इम्पैक्ट बिज़नेस में रूचि न हो, तो फिर वेस्टीज, एमवे, नेकसमनि, हर्बालाइफ, मोदीकेर या आपके
+    <br><br>    पसंद की कोई भी कंपनी कर ले।*<br><br> आपके पास यही विकल्प है।<br><br> लेकिन सोचने में वक्त न लगाए।<br><br>
+    जो डर के जीते है, वे अपने सपनो की ज़िंदगी नहीं जी सकते।<br><br> इसलिए लंबी छलाँग लगाइए।<br><br> कोई भी कंपनी करे और उसमे
+    अपने आपको समर्पित कर दे।<br><br>
+<br><br>    *हमारी बस यही सलाह है कि काम करना ही हो तो सबसे अच्छे सिस्टम में ही करना चाहिए।*<br><br> इम्पैक्ट से अच्छा आपको नहीं
+    मिलेगा।<br><br> इसलिए इम्पैक्ट बिज़नेस का भाग बने।<br><br> हम नहीं चाहते ज़्यादातर नेटवर्कर्स का करियर जिस तरह अँधेरे में डूब जाता
+    है, आपके साथ ऐसा हो।<br><br>
+    <br><br>    धन्यवाद।<br><br> ऑल द बेस्ट।<br><br> ������
+
+    <br><br><br><br>*{{z.firstname}} : {{z.phone}}*
+  </p>
+  <br><br>
+
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w19')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w20" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>    <br><br>नेटवर्कर की दर्द भरी मार्मिक कथा ☹������
+
+    <br><br>प्रकाश: क्या विजय !!! कैसे हो यार।<br><br> सब बढ़िया???
+    <br><br>विजय: ठीक हूँ भाई।<br><br> ज़िंदा हूँ।<br><br>
+
+    <br><br>प्रकाश: ऐसा क्यों बोल रहा है भाई।तू तो एम्.एल.एम्. लीडर है यार। पिछली बार तो बड़े जोश में मिला था। और इस बार सूखा
+    सूखा बोल रहा है।<br><br>
+    <br><br>विजय: कुछ नहीं यार। मन उठ गया है नेटवर्क मार्केटिंग से। पुरे जी जान से कोशिश किए जा रहा हूँ, पर कुछ हाथ नहीं लगता।<br><br>
+
+    <br><br>प्रकाश: क्या बात कर रहा है यार??? तूने ठीक से मेहनत नहीं की होगी।<br><br>
+
+  <br><br>  विजय: अरे पूरा ज़ोर लगा दिया। दिन के 5 - 10 प्लान बताया। *लेकिन टीम बार बार टूट जाती थी।* कोई दोबारा सामान नहीं
+ खरीदता। रिपर्चेस ही नहीं होती।<br><br>
+
+    <br><br>प्रकाश: अरे तूने मीटिंग अटेंड नहीं किए होंगे।<br><br>
+    <br><br>विजय: कंपनी के सारे मीटिंग अटेंड किए। 1000 किलोमीटर दूर भी जाकर फंक्शन अटेंड किए। कंपनी के सिस्टम के अनुसार
+    काम किया पर कुछ हाथ नहीं लगा। सिर्फ कंपनिया अमीर बनते है, नेटवर्कर तो धरा का धरा रह जाता है।<br><br>
+
+<br><br>    प्रकाश: *अरे तूने जब लोगो को प्लान दिखाया होगा तब तूने कंपनी के बारे में बड़ी बड़ी बातें नहीं की होगी?*
+<br><br>    विजय: अरे प्रोस्पेक्ट को कंपनी की सब बड़ी बड़ी मिसाले दी। *जय जय कार करता रहा कंपनी का।* ज़ोर डालकर बताया के
+    कंपनी कितनी बड़ी है। फिर भी कुछ नहीं होता यार।<br><br>
+
+<br><br>    प्रकाश: *तब तो तूने अपने लीडरों का इनकम नहीं दिखाया होगा? बोल, दिखाया क्या ?*
+<br><br>    विजय: अरे प्रकाश, मै तो जाते ही सबसे पहले लीडर लोगो का इनकम दिखाता था ताकि प्रोस्पेक्ट का ब्रेनवॉश हो जाए। मीटिंग
+    में स्टेज पर आकर भी बहोत से लीडर अपनी इनकम दिखाते थे जो प्रोस्पेक्ट देखते थे। फिर भी कुछ नहीं होता यार।
+
+<br><br>    प्रकाश: तूने प्रोडक्ट की प्रशंसा नहीं की होगी ठीक से? डेमो नहीं दिखाया होगा ? सही कह रहा हूँ ना विजय ?
+<br><br>    विजय: बकवास बंद कर प्रकाश। दुनिया भर के प्रोडक्ट डेमो बताए। 10 में से 2 या 3 के ही रिज़ल्ट आते है। उन सब लोगो की
+    रिज़ल्ट प्रोस्पेक्ट को दिखाया। कुछ नहीं होता भाई। कस्टमर एक बार लेता है। बार बार नहीं लेता। आजकल सब समझदार हो
+    गए है।
+
+    <br><br>प्रकाश: अच्छा !!! फिर तूने कंपनी के सर्टिफिकेट और लीगल डॉक्युमेंट नहीं दिखाए होंगे ? बता, दिखाए क्या ?
+  <br><br>  विजय: अरे सारे सर्टिफिकेट दिखाता हूँ यार। थैला भर के दिखाता हूँ। ब्रेनवॉश करने के सारे नुस्खे अपना लिए भाई। पर कोई
+    नहीं पैसे निकालता। कोई जॉइन हो भी जाए तब भी रिपर्चेस नहीं करना चाहता कोई कंपनी के प्रोडक्ट्स। सच कहु तो अब तो मै
+    भी कंपनी के प्रोडक्ट्स नहीं लेता। क्या ज़रूरत है ?!!!
+
+    <br><br>प्रकाश: ओह्! देख, लोगो को ठीक तरह से हेल्थ बेनिफिट बताना पड़ता है।<br><br>
+  <br><br>  विजय:अरे सब समझाया, मै खुद डाक्टर जैसा हो गया हूँ। एक दो बार लोग प्रोडक्ट लेते है बस। अब तो थक गया हूँ।
+
+  <br><br>  प्रकाश: तू इनकम प्लान ठीक से नहीं समझाता होगा विजय? तभी तुझे दिक्कत आ रही है।<br><br>
+  <br><br>  विजय: अरे दुनिया भर के क्लब इनकम, मैचिंग इनकम, ढिकना इनकम, फॉरेन ट्रिप, कार फंड, हॉउस फंड, ऑटो इनकम,
+    ढकना इनकम, सारे एवॉर्ड - रिवॉर्ड समझा दिए भाई। मिलता किसे है यह सब। मुझे तो लगता है नेटवर्क मार्केटिंग में किसी का
+    करियर नहीं बन सकता अब। कोई नहीं कमा रहा पैसे यार ? बहोत कंपनी बदल कर देख लिए। हर कंपनी में सबका एक ही हाल
+    है।<br><br>
+
+    <br><br>प्रकाश: ओह। ऐसी बात है क्या ? अरे तू इन्वेस्टमेंट प्लान क्यों नहीं कर लेता ?
+  <br><br>  विजय: नाम मत ले इन्वेस्टमेंट प्लान वाली कंपनियों का। 3-4 कंपनियों में लगाया और दुसरो का भी डलवाया। सब चोर होते
+    है साले। मुझे तो पहले से पता था। पर सोचा थोड़ा फायदा उठा लिया जाए। लेने के देने पड़ गए। जो ऐसी कंपनिया चला रहे थे
+    उनके मालिक और बहोत से एजेंट गिरफ्तार हो गए। अब तक जेल से बाहर नहीं आए। इन्वेस्टमेंट प्लान में 40 लोगो की
+    कमाई होती है और निचे 4000 लोगो को ठग लिया जाता है। पाप हो गया मेरे से। मैंने भी पैसे गंवाए। टाइम भी गया और
+    गुडविल भी। सोच रहा हूँ नौकरी कर लू। या कोई छोटी मोटी ठेकेदारी कर लू।
+    <br><br>    <br><br>प्रकाश: हाँ यार। आज कल बहोत से पुराने लीडर्स दुबक कर किसी नौकरी-धंधे में ही लग चुके है।
+  <br><br>  विजय: मै तो पूरी तरह से हताश हो चूका हूँ। नेटवर्क मार्केटिंग में किसी का करियर नहीं बन सकता। मैंने पूरी कोशिश कर ली।
+    <br><br>    प्रकाश: तू सही जा रहा है। *लोगो को कंपनी के नाम के बखान सुनाकर, कंपनी की बड़ी बड़ी बातें करके, कंपनी के ढेर सारे
+    सर्टिफिकेट दिखाकर, लीडरों के बड़े बड़े चैक व् इनकम दिखाकर, प्रोडक्ट के हेल्थ रिज़ल्ट दिखाकर, या कंपनी के भक्त बनकर
+    जय जयकार करने से अगर करियर बन पाता, तो आज सभी लोग अमीर बन जाते।* पर ऐसा होता नहीं है। यह सब खोखली
+    बातें है, ब्रेनवॉश करने के नुश्खे है। लेकिन सत्य है कि आज 10000 नेटवर्कर में 10 नेटवर्कर भी ऐसे नहीं मिलते जो दिखा
+    विजय: बात सही है यार। सब दिखावा है।<br><br>
+    सके कि वे 20000 रूपए भी पिछले 6 महीनो से कमा रहे हो। इतनी भी इनकम नहीं होती। और बातें करोडो की करते है।<br><br>
+
+    <br><br>प्रकाश: *कंपनी के भक्त बनने से या जय जयकार करने से पैसे नहीं आते विजय।* चीज़ अच्छी और सच्ची होनी चाहिए। जब
+    तक कस्टमर्स को और बेचने वाले को असलियत में फायदा न हो, तब तक वैसा बिज़नेस करने का कोई मतलब नहीं है।<br><br><br><br>
+    विजय: अच्छा। अरे वो छोड़। मेरी पूछे जा रहा है। अपनी नहीं बता रहा। तूने भी तो कोई कंपनी जॉइन किया था पिछली बार
+        मिला था तब। क्या नाम था उसका, इम्पैक्ट जैसा कुछ ??<br><br><br><br>
+    प्रकाश: हाँ विजय। इम्पैक्ट। *मै पहले भी इम्पैक्ट करता था, और आज भी इम्पैक्ट करता हूँ। और भविष्य में मुझे कोई और
+    कंपनी करने की ज़रूरत नहीं पड़ेगी।*<br><br>
+    <br><br>    विजय: इतना विश्वास के साथ कैसे कह सकता है ?
+    <br><br>    <br><br>प्रकाश: क्योंकि इम्पैक्ट से अच्छा बिज़नेस इस पृथ्वी पर नहीं है। अगर कोई इम्पैक्ट नहीं कर पाया तो कोई और कंपनी तो
+    पक्का नहीं कर पायेगा।
+    <br><br>विजय: ऐसा क्या है इम्पैक्ट में ?
+    <br><br>    प्रकाश: पहले तो इम्पैक्ट का मार्केटिंग सिस्टम बहोत स्ट्रांग है। *दूसरे कंपनी के नेटवर्कर्स नेटवर्कर्स जितनी मेहनत करते है,
+    उसकी तुलना में मै 70% कम काम करके उनसे ज़्यादा इनकम कमाता हूँ।* इम्पैक्ट में मुझे कुछ नया नहीं करना पड़ा।
+    नेशनल ब्रैंड के प्रोडक्ट्स मिले, जो मै वैसे भी बाहर से लेता ही था। वो भी इतने फायदे के साथ के विश्वास ही नहीं होता। जहाँ
+    आज हर कंपनी का लीडर कुछ हासिल नहीं कर पा रहा वहीं मेरे हाथ हीरे की खान लग गई। इस बिज़नेस में व्यक्ति चाहे किसी
+    भी बैकग्राउंड का हो, इंजीनियर हो या किसान, हर कोई अगले 3 से 6 महीने में 50000 रुपए की इनकम कर सकता है, बड़ी
+    आसानी से।<br><br>
+    <br><br>विजय:अच्छा, वो कैसे ?
+    <br><br>    <br><br>प्रकाश: *पहले तो इतना समझ ले की यह बिज़नेस ऐसा है जो हर किसी को पसंद आता ही है। यहाँ लोग जॉइनिंग अपने आप
+    लेते है और रिपर्चेस भी हर महीने अपने आप होता रहता है। इसलिए पैसा अपने आप आता रहता है।* यहाँ मुझे किसी मोटे को
+    पतला नहीं करना पड़ता, ना महँगे प्रोडक्ट्स लोगो को पकड़वाना होता है, न किसी के घुटनो का, या ब्लडप्रेशर, डाइबिटीस ठीक
+    करने वाला डॉक्टर बनना पड़ता है। मुझे किसी नज़दीक के रिश्तेदार को जो आज तक 80 रूपए वाला फेसवॉश या डीओ यूज़
+    कर रहा है, उसे 200 रूपए वाला प्रोडक्ट भी चेंज नहीं करवाना पड़ता जैसा दूसरे कंपनियों में होता है।
+    विजय: क्या बात कर रहा है प्रकाश ? मुझे विश्वास नहीं होता। विस्तार से समझा।<br><br><br><br>
+    <br><br>    प्रकाश: *मेरा बिज़नेस पुरे देश में फ़ैल रहा है लेकिन मुझे किसी को कुछ ख़ास समझाना भी नहीं पड़ता। न पेट्रोल खर्च, न
+    समय बर्बाद करना मीटिंगों में जा जाकर। कंपनी का सिस्टम मेरी और मेरी टीम का बिज़नेस बिल्ड करके देता है।* तू अगर
+    वाकई नेटवर्क मार्केटिंग में समय बर्बाद न करके अब कि बार पैसे कमाना ही चाहता है तो बस एक काम कर ले। कान में
+    यरफ़ोन लगा, और ध्यान से यह दो वीडियो देख ले, और वेबसाईट ध्यान पूरा पढ़ ले। इतना तो कर सकता है ना ?<br><br><br><br>
+    विजय: हाँ भाई हाँ, क्यों नहीं कर सकता। बता कहाँ है वीडियो, हम भी देखे क्या ख़ास है तेरे बिज़नेस में ?
+
+<br><br>    प्रकाश: समझ ले तेरा नेटवर्क मार्केटिंग करियर बच गया। यह ले वीडियो। ������
+
+    JOIN INDIA’S FASTEST GROWING BUSINESS- IMPACT!!!<br><br>
+    <br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br><br>    VALUEMART BUSINESS OPPORTUNITY!!!<br><br>
+    <br><br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br><br>    <br><br>*{{z.firstname}} : {{z.phone}}*
+
+    <br><br>READ FULL WEBSITE!!!
+    <br><br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+  </p>
+</div>
+<br><br><br><button id="button1" onclick="CopyToClipboard('w20')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+<hr>
+<div  id="w21" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br><br>    *इम्पैक्ट बिज़नेस में बहोत कमियाँ है।*<br><br>
+    <br><br>    एक इम्पैक्ट डिस्ट्रीब्यूटर की कहानी सुनाता हूँ।<br><br> मज़ेदार है।<br><br> ������
+    <br><br>    इस व्यक्ति ने लगभग 4 महीने पहले जॉइनिंग ली।<br><br> लेकिन सीरियस नहीं थे।<br><br> ☺☺
+    <br><br>    सब कुछ समझ लिया।<br><br> लेकिन उनके मन में पता नहीं क्यों असंतोष रहा।<br><br>����
+    <br><br>    हमने समझाया।<br><br> पर वे समझे नहीं।<br><br> *ईगो होता है ना ???*
+
+    <br><br>    फिर वे गायब हो गए।<br><br> कुछ दिन पहले ही लौटे है।<br><br>�
+    क्या करते रहे इतने दिनों ??? पूछने पर बताया कि 3 और कंपनी में जाकर देखा।<br><br> *लेकिन उनमे तो इम्पैक्ट जैसा दूर दूर तक
+    नहीं।*<br><br>
+    <br><br>    *हमने कहा कि &quot;जो डिमांड आपने यहाँ रखी थी, वो आपने वहाँ क्यों नहीं रखी ??? उस कंपनी के मैनेजमेंट को आपने सलाह
+       नहीं दी ???*
+    उन्होंने कहा &quot;जब *इम्पैक्ट की आधी चीज़ें दूसरी कंपनी नहीं रखती, तो और क्या डिमांड करता ??? मुझे इम्पैक्ट के किट में
+    जो सामान आया, वैसा तो उनमे दूर दूर तक नहीं है। वो बिज़नेस लम्बा नहीं चलेगा।*<br><br> इम्पैक्ट ही सही है।<br><br>&quot;
+    <br><br>    *आज इम्पैक्ट बिज़नेस में पढ़े लिखे चार्टर्ड एकाउंटेंट्स, डॉक्टर्स, अच्छे प्रोफ़ाइल पर नौकरी करने वाले लोग जुड़ रहे है। यह
+    सभी मुर्ख नहीं हो सकते। कुछ अच्छा देखा होगा तभी जुड़े होंगे ना ???*
+    <br><br>    भाइयों। आप शायद इम्पैक्ट को अभी तक ठीक से समझे नहीं है। इससे अच्छा सिस्टम/ऑफर/पेआउट अगर कहीं और मिले,
+        तो आपको तुरंत उस कंपनी में जोइनिंग लेकर करियर सेट कर लेना चाहिए।<br><br>
+    हो सकता है आपके भी मन में कुछ बातें हो, कि इम्पैक्ट में ऐसा होना चाहिए, वैसा होना चाहिए।<br><br> *यह आपका साइकोलॉजिकल
+       प्रॉब्लम है।*<br> आइए समझते है कैसे।<br><br>
+    क्या आप नौकरी पर कभी ऐसा कहते हो कि मुझे ऐसा चाहिए, वैसा चाहिए ??? नहीं कहते ना ??? कभी शिकायत की के एक
+    घंटा रोज़ आना जाना पड़ता है।<br><br> *काम पसंद नहीं है। टेंशन रहता है। बीमारी और रोग बढ़ रहे है*।<br>* महीना खत्म होने से पहले पैसे
+    ख़त्म हो जाते है ??? परिवार वालो से दूर रहना पड रहा है।*<br> *पैसे कम पड़ रहे है।*<br> *कभी कहा क्या अपने बॉस से ??? अगर कह
+    दिया तो नौकरी नहीं रहेगी।*<br><br>
+    <br><br>    मान लो आप किसी जीवन बिमा कंपनी में काम करते हो।<br> तो क्या आप वहां यह कहते हो की दूसरी कंपनी में ऐसा मिल रहा है,
+    <br><br>    वैसा मिल रहा है।<br> हमें भी देना चाहिए। *अगर कह दिया तो घर पर बैठना पड़ जाएगा।*<br><br>
+    *कभी बीवी से शिकायत कि के मिस्टर दुबे की बीवी अपने पतिदेव के लिए ऐसा करती है, वैसा करती है। गलती से भी मत
+        करना। अक्कल ठिकाने आ जाएगी।*<br><br>
+    *भगवान से शिकायत कि के जीवन में प्रॉब्लम्स बहोत हो रहे है।*<br> *तुम सर्वशक्तिमान होकर भी क्यों इन सबका हल नहीं
+    निकालते ??? चुप चाप संघर्ष कर रहे हो ना ??? यही जीवन है।*<br><br>
+    <br><br>    *आपको इम्पैक्ट से बेहतर विकल्प मिल रहा हो, तो कृपया तुरंत उसे करके अपना करियर सेट कर ले। और हमें भी बताए। हमें
+    तो इससे अच्छा विकल्प कहीं और मिला नहीं। ढूँढ रहे है।*<br><br>
+    v<br><br>    आज रोज़ ऐसे नेटवर्कर मिलते है जो दर्जनों कंपनियों में ठोकर खा चुके है। कभी सूट लेंथ का कपडा लिया, दूसरे ब्रैंड के
+    प्रोडक्ट्स लिए, कम पे आउट पर काम किया, हैल्थ सप्लीमेंट्स पर बिना शिकायत के काम किया, खूब मेहनत की, लेकिन
+        करियर सेट सालों में नहीं हुआ।<br><br>
+    लेकिन इम्पैक्ट में खामियां निकालते है। और अपना कीमती समय खराब करते है। इम्पैक्ट में ऐसा होना चाहिए। वैसा होना
+    चाहिए।<br><br>
+
+    <br><br>    *कभी यह नहीं बताते कि इससे अच्छी कंपनी कौनसी होगी करियर के लिए।*<br><br>
+    *<br><br>दोस्तों, अगर शादी करनी है, पक्की वाली शादी, तो एक लड़की देखो, दूसरी देखो, 5 लड़कियाँ देख लो, 10 देख लो। लेकिन
+    अगर सभी में आपको कमी नज़र आती है तो एक ही विकल्प रह जाता है। इन सबमे से जो सबसे अच्छी लड़की हो, जो आपकी
+    ज़िंदगी सँवार दे, उसी से शादी कर लो।*<br><br>
+    <br><br>    बाजार में कपडा लेने गये। एक दूकान पर कपडे देखो, 5 में देख लो। लेकिन अंत में अगर कपडे पहनने ही है, तो जो सबसे
+        अच्छी दूकान थी, वहीं से ले लेना चाहिए या नहीं ??? ����
+  <br><br>  तो 5 कंपनियों के प्लान देख लो। उन सब में से जो सबसे अच्छा हो, उसे इम्पैक्ट के साथ कंपेर कर लो। देखो उसमे जोइनिंग में
+    अरहर दाल, मसूर दाल, आटा, चावल, काबुली चना, राजमा, वाघ बकरी चाय, मूंग दाल, सरसो, जीरा, तिल वगैरह दे रहे है क्या
+        ??? 3 लाख या 5 लाख का टर्न ओवर करने पर कितना पे आउट बन रहा है???<br><br>
+    ��� हम और आप यह जानते है कि पृथ्वी पर सबसे समझदार व्यक्ति आप ही है। आपका निर्णय सही ही होगा। और आपका
+    करियर आप खुद ज़रूर सेट कर लेंगे। *आपके पास बेहतर विकल्प हो, तो कृपया हमें ज़रूर बताए। हमें पता है इम्पैक्ट में
+    बहोत सारी कमियाँ है, हम भी कुछ बेहतर ढूँढ रहे है, लेकिन इम्पैक्ट से अच्छा मिल नहीं रहा।* इसलिए इसे ही कर रहे है, और
+        दुसरो के मुकाबले काफी अच्छा पे आउट मिल रहा है टर्न ओवर के हिसाब से। इतना किसी और कंपनी में तो आज तक नहीं
+    मिला।<br><br> ������
+    <br><br>    अंत में एक छोटा सा सवाल पूछना चाहूँगा।<br><br> *आपको इम्पैक्ट बिज़नेस में कोई खूबी नहीं दिखी ?* इसलिए पूछ रहा हूँ क्योंकि
+    जिन्हे इसमें कमियाँ दिखी, वे आज भी भटक रहे है। लेकिन जिसे इसमें खूबी दिखी, उन्होंने आज तक 5 - 10 कंपनियों में कई
+    सालों तक काम करके भी जो पैसा नहीं कमाया, उससे कहीं ज़्यादा यहाँ बहोत कम समय में कमा लिया।<br><br>
+
+<br><br>    <br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+
+    <br><br><br><br>*{{z.firstname}} : {{z.phone}}*
+  </p>
+</div>
+<br><br><br><button id="button1" onclick="CopyToClipboard('w21')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+<hr>
+<div id="w22" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br><br>    *इम्पैक्ट बिज़नेस करोगे तो रिस्पॉन्स अच्छा मिलेगा। रिस्पॉन्स अच्छा मिलेगा तो इनकम अच्छी मिलेगी। करियर
+    अच्छा बनेगा।*<br><br>
+    ����������
+    <br><br>    नए ज़माने के प्रोडक्ट्स में अलग खूबी है
+    <br><br>    दोस्तों आपने टीवी पर ऐड देखी होंगी जो हमेशा बार-बार यही बोलते हैं क्या आपके टूथपेस्ट में नमक है??
+    <br><br>    अब जमाना बदल गया है।<br><br> *अब लोग कहने लगें हैं क्या आपके टूथपेस्ट में गाड़ी है ???*
+    <br><br>    चौंक गए ना??? लेकिन जी हां!!! सही सुना आपने।<br><br> 100% सही।<br><br>
+    <br><br>    क्या आपके टूथपेस्ट में गाड़ी है??
+    <br><br>    *क्या आपके चावल में मान सम्मान है?*
+    <br><br>    क्या आपके आटा में पैसा है?
+    <br><br>      क्या आपके हल्दी और दूसरे मसालों में बेहतर लाइफस्टाइल है?
+    क्या आपके साबुन में फाइनेंशियल सिक्योरटी है? ताकि जब आप इस दुनिया में ना रहें तब भी आपके घर वालों को
+    जिंदगी शून्य से ना शुरू करनी पड़े?
+    <br><br>    *क्या आपके सरसों और जीरे में फॉरेन टूर हैं?*
+    <br><br>    अगर नहीं है तो सोचो मत। *जल्दी से अपना प्रोडक्ट बदलो क्योंकि इंपैक्ट के टूथपेस्ट ही नही हर एक प्रोडक्ट में
+    यह सब है !!
+    मान सम्मान है इज्जत है
+    शोहरत है गाड़ी है पैसा है बंगला है।*<br><br>
+
+    आप खुद देख सकते हैं और ले सकते हैं वह भी मात्र प्रोडक्ट और दुकान बदलकर ।<br><br>
+    जमाना बदल गया है इसलिए सोच बदलो।<br><br>
+    सोच बदलने से जिंदगी बदलती हैं।<br><br>
+    <br><br>    *इंपैक्ट के प्रोडक्ट यूज करने से जिंदगी सँवरती है।*<br><br>
+    <br><br>    इम्पैक्ट किट पाकर लीडर्स कहते है मज़ा आ गया, घर भर दिया इम्पैक्ट ने।<br><br> 20 Products in just 3600 Rs.
+    YOU GET
+    <br><br>    Tuver Dal (1 Kg) | Moong Dal (1 Kg) | Masoor Dal (1 Kg) | Sugar 4 Kg | Kanhaiya Aata 5 Kg |
+    Dabur Toothpaste 200 gms | Suhana Biriyani Masala | Tata Agni Tea 1 Kg | Navratna Namkeen
+    1 kg | 2 Warming cum Cooling Bag | 4 Massager | Park Avenue Perfume | Hing (50 gms) |
+    Suhana Paneer Tikka Masala | Ramdev Mirchi (200 gms) | Ramdev Dhaniya (200gms) | Til (100
+
+    gms) | Sanchar (200 gms) | Sarso (200 gms) | Singhav Salt (1 Kg) | Premium Mukhwas (200
+    <br><br>    gms x 3) | *2000 BV*
+    मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br>
+    What’s App Group: <br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+    <br><br>    जॉइनिंग लिंक से जॉइन हो जाइए,
+    <br><br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+
+    <br><br>    बिज़नेस करो एक बार।<br><br> पैसा कमाओ बार बार।<br><br>
+    आपकी सफलता का ट्रेलर खुद देख लीजिए।<br><br>
+    <br><br>    <br><br>    <br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+    VALUEMART OPPORTUNITY VIDEO
+    <br><br>    <br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br>    <br><br>    हर महीने का खरीद आज तक पैसे देकर करते थे।<br><br> लेकिन अगर राशन फ्री में आ जाए तो ???
+    <br><br>    अगर 6 लोग आपके साथ जुड़ते है, और आप खुद अगर एक बिज़नेस साइकल में हर कोई 8000 BV का काम
+    करते है, तो आपके पहले महीने की इनकम होगी 15760 रुपए।<br><br>
+    <br><br>    *हो गया न घर का राशन फ्री???* अलग से पैसे भी मिले।<br><br> मज़ा आया?!!! यह तो ट्रेलर है।<br><br> पिक्चर अभी बाकी है।<br><br>
+  <br><br>    अगले महीने अगर आपके 6 दोस्तों से भी रहा न गया, और अगर वे बिज़नेस में चार लोगो को लाते है, तो 24
+    लोग नए आए और पुराने 7 लोग, याने कुल 31 लोगो की टीम।<br><br> अगर हर कोई 8000 BV का काम करता है तो
+    आपके अगले महीने की इनकम होगी *56880 रुपए*।<br><br>
+    *अच्छे दिन बैठे रहने से नहीं आते है।<br><br> उन्हें पाने के लिए बुरे दिनों से लड़ना पड़ता है।*<br><br>
+    <br><br>CALL {{z.phone}}
+  </p>
+</div>
+<br><br><br><button id="button1" onclick="CopyToClipboard('w22')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+<hr>
+<div id="w23" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>    *सत्यमेव जयते*
+
+    <br><br>    मैंने आपको इम्पैक्ट बिज़नेस दिखा दिया है।<br><br> पूरी जानकारी दी है।<br><br>
+    यह भी बताया है कि इससे ज़्यादा अच्छा प्लान, जॉइनिंग व् रिपर्चेस पैकेज, मार्केटिंग सपोर्ट आपको अन्य किसी
+    <br><br>    कंपनी में नहीं मिलेगा।<br><br>
+    काम के लोड के वजह से मै आपका फॉलो अप नहीं कर सकता।<br><br> आपसे नहीं पूछ सकता के आप तैयार हो गए या
+    <br><br>    नहीं।<br><br> किसी के पीछे पड़ना मेरी आदत नहीं।<br><br> आपके जॉइनिंग के बाद मै आपको पूरा सहयोग ज़रूर दूंगा।<br><br>
+    आपके हर प्रश्न का उत्तर है मेरे पास जो आपको सफल बनाने के लिए पर्याप्त है।<br><br> *लेकिन डर और शंका का कोई
+    उत्तर नहीं होता।<br><br> लालच, जो बुद्धि पर पर्दा डाल देता है, उसका कोई उत्तर नहीं होता।*<br><br> उनसे आपको खुद ही जूझना
+    <br><br>    होगा।<br><br> यह आपके अंदर है और आपकी असफलता का कारण बन सकते है।<br><br>
+    समय सब कुछ ख़त्म कर देता है।<br><br> *आपका उत्साह ख़त्म हो उससे पहले यह सही कदम उठा लीजिए।*<br><br> इम्पैक्ट
+    <br><br>    बिज़नेस जॉइन कर लीजिये।<br><br>
+    जोइनिंग लिंक - ://<br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+    <br><br>    आज हर कंपनी के लीडर्स और नेटवर्कर्स इम्पैक्ट से जुड़ रहे है क्योंकि उन्हें हर महीने घर का सामान तो लेना ही
+    है।<br><br> दाल, चावल, आटा, शक़्कर, चाय, तेल, शैम्पू वगैरह हर महीने किस घर में नहीं लिया जाता??? इम्पैक्ट एक बेहतर
+    डिस्ट्रीब्यूशन प्रणाली है।<br><br> आपको मार्केट रेट से भी कम में नेशनल ब्रैंड्स के प्रोडक्ट्स मिलते है।<br><br>
+    <br><br>    100 रुपए से आप बिज़नेस स्टार्ट कर सकते है।<br><br> और हर डाइरेक्ट जॉइनिंग पर आपको 8% मिलता है।<br><br> *आपकी
+    टीम जब भी रिपर्चेस करती है, हर बार आपके डाइरेक्ट जुड़े लोगो से आपको 8% उनके खरीद पर से मिलता रहता
+    है।<br><br> इसके अलावा भी बहोत से इनकम है।*<br><br>
+    <br><br>    आप अपने घर का सामान फ्री में भी पा सकते है। और अगले 6 महीनो के अंदर चाहे तो 50000 Rs हर महीना
+        कमा सकते है। याने हर रोज़ 2000 रुपए या उससे कहीं ज़्यादा।<br><br>
+    *अगर आपको लगता हो के आपके पास इम्पैक्ट से बेहतर बिज़नेस है, तो कृपया मुझे समझाए। देर न करे।*
+    आप ने अगर जॉइनिंग में एक दिन की देरी की तो समझ लीजिए 2000 रुपए का नुकसान कर लिया। 10 दिन
+    की देरी मतलब 25000 रुपए। अच्छा मौका गँवा दिया तो सिर्फ ख़राब मौके ही हाथ लगेंगे। जॉइन करे नीचे दिए
+    गए लिंक द्वारा,
+      <br>  जो वक्त बर्बाद करते है, वक्त उन्हें बर्बाद कर देता है।* इसलिए समय गँवाये बिना अपने कर्मो में जुट जाइए।*<br><br
+    <br><br>    जोइनिंग लिंक -<br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+      अगर कोई और कंपनी जॉइन कर लिया तो 100 रुपए का तेल, फेस वॉश वगैरह 200 रुपए में खरीदोगे।<br> खुद
+    महँगा खरीदोगे और दुसरो को भी महँगा दिलवाओगे। यह काम फिर लंबा नहीं चलेगा। टीम भी थक कर हार   जाएगी।<br><br>
+    इससे भी विपरीत यह हो सकता है कि हैल्थ के प्रोडक्ट्स लेकर डॉक्टर बने फिरोगे।10 में से 7 - 8 लोगो का
+    रिज़ल्ट नहीं आएगा। वो काम भी लंबा नहीं चला।<br><br>
+    <br><br>    इसीलिए आज 10000 नेटवर्कर में से 10 नेटवर्कर भी पिछले 6 महीनो से 25000 रुपये/महीना नहीं कमाते।*आप
+    वो मत करिए जो दूसरे लोग करते है।*आप वो सब मत देखिये जो वो देखते है और खुद ही अपना ब्रेनवॉश करवाते
+    है।<br><br>
+    <br><br>    मै आपको सफल ज़रूर देखना चाहता हूँ, पर मै आपको सफल नहीं बना सकता।*आपको वो खुद ही करना होगा।*मै
+    आपकी यात्रा में आपकी मदद कर सकता हूँ।*एक साथी की तरह।<br><br>
+    <br><br>    मै और कंपनियों की तरह आपका ब्रेनवॉश नहीं करूँगा।*मै आपको बड़ी बड़ी बातें नहीं बोलूंगा।*मै दूसरे लोगो की
+    इनकम दिखाकर आपको बेहोश नहीं करूँगा।*मै आपको कंपनी के सर्टिफिकेट वगैरह दिखाकर आपको नहीं
+    उलझाऊँगा।<br><br>
+    यही सब देखना हो तो दूसरी सभी कंपनिया बहोत अच्छे से दिखाएगी जिससे आपका ब्रेनवॉश हो जायेगा।*और
+    आपका ध्यान प्लान और इनकम पर से हट जाएगा।*ऐसे लोग बड़ी बड़ी बातें तो करते है, लेकिन बैंक बैलेंस इनका
+    छोटा ही रहता है।*और यह लोग बार बार कंपनिया बदलते रहते है।<br><br>
+    <br><br>    इसलिए किसी की बातों में मत आओ।*सोच समझकर सही कम्पनी का चुनाव करो।*इम्पैक्ट करो।*कोई प्रश्न हो तो
+    कॉल ज़रूर करे - {{z.phone}}
+    <br><br>    किसी के सपने पुरे करने में, किसी परिवार में खुशहाली लाने का काम करके बड़ा अच्छा लगता है।<br><br>
+    <br><br>    *अच्छे दिन बैठे रहने से नहीं आते है।*उन्हें पाने के लिए बुरे दिनों से लड़ना पड़ता है।*<br><br>
+    <br><br><br>     जोइनिंग लिंक - <a href="{{z.joininglink}}">*{{z.joininglink}}*</a><br><br>
+    <br><br> MISSION IMPACT मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br>
+
+<br><br>    What’s App Group: <br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+    *TO STOP RECEIVING MESSAGE REPLY STOP*
+  </p>
+</div>
+<br><br><br><button id="button1" onclick="CopyToClipboard('w23')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+<hr>
+<div id="w24" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br><br>    *कुछ लोग इंपैक्ट बिज़नेस प्लान देखने के बाद कहते है के मै सोचता हूं।*<br><br>
+    <br><br>    क्या कोई घर का सामान लाते समय भला सोचता है?
+    <br><br>    क्या कभी कोई भारी डिस्काउंट का फायदा भला छोड़ता है?
+    <br><br>    क्या कोई बुद्धिजीवी पैसे कमाने का दुनिया के सबसे आसान तरीका मिल जाने पर सोचता है?
+    <br><br>    क्या अगले एक साल में आसानी से 6 लाख से 10 लाख रुपए कमाने का मौका मिलने पर कोई सोचने बैठता है?
+    <br><br>    दुनिया में सब कुछ आसानी से ठीक किया जा सकता है, *पर मिडल क्लास सोच बदलना बेहद मुश्किल है।*
+    <br><br>    यह बड़ी बड़ी बाते सुनकर प्रभावित होते है, चमक दमक से प्रभावित होते है और बार बार फंसते रहते है।*अपनी अक्ल नहीं
+    *   लगाते।*<br><br>
+    यह वही करते है जो बाकी सब करते है। और अपने दिमाग का इस्तेमाल नहीं करते।<br><br>
+    <br><br>    *और जब कोई सही मौका मिल जाए तो उन्हें डर लगता है।* अंदर से भयभीत रहते है।<br><br>
+    <br><br>    *कम पैसों में नौकरी पूरी ज़िंदगी करनी पड़े, तब यह नहीं सोचते।*<br><br>
+    <br><br>    *महीना खत्म होने से पहले इनके पैसे खत्म हो जाते है, पर उस बात से इन्हें डर नहीं लगता।* यह एडजस्ट करने में,
+    कॉम्प्रोमाइज करने में माहिर हो जाते है।<br><br>
+    <br><br>    तनख्वाह की रिश्वत लेकर अपने सपनों को हमेशा के लिए दफनाते समय इन्हे डर नहीं लगता।<br><br>
+    <br><br>    बॉस का, बिज़नेस व नौकरी का प्रेशर सहते वक्त इन्हे डर नहीं लगता।<br><br>
+    <br><br>    *इनके बच्चो को अगर अच्छी शिक्षा की चाह हो, लेकिन फीस न भरने की क्षमता के बारे में क्या करे, यह कभी नहीं सोचते।*<br><br>
+    <br><br>    *ज़िंदगी कट रही हैं न, पिछला महीना गुजर गया, यह वाला भी गुजर ही जाएगा। बस यह महीने गुजारने की चाह रखते है।
+    <br><br>    ज़िंदगी जीने पर इनका ध्यान नहीं जाता।*<br><br>
+    मिडल क्लास लोग पैसे कमाते है और बिल भरते है। सिर्फ बिल भरने के लिए काम करते है। *दूसरे शबदों में, ज़िंदगी जीते नहीं,
+    ज़िंदगी काटते हैं।*<br><br>
+    <br><br>    ज़ाहिर सी बात है, जब खुद का गुज़ारा मुश्किल से हो रहा हो, तो ऑरो की मदद करने की भावना, समाज व देश के लिए कुछ
+    करने की भावना इनमें लगभग शून्य होती है।<br><br>
+    <br><br>    इन्हे न्यूज़ देखकर घबराने की आदत होती है। *मन में हमेशा असुरक्षा और भय घेरे रहता है।*<br><br>
+    <br><br>    लोन और बिल भरने का भय। नौकरी चली गई अगर किसी दिन तो क्या होगा, उस बात का भय?
+       आजादी नहीं है, पर क्या फर्क पड़ता है?
+
+    *पेट आगे निकल आ रहा है, एसिडिटी और कोंस्टीपेशन हो रहा है, पर क्या फर्क पड़ता है? अब तो आदत हो गई है।*
+        धीरे से ब्लड प्रेशर और शुगर भी हो गया। पर क्या फर्क पड़ता है। सभी को तो हो रहा है। यह सोचकर मन को झूठी तसल्ली दे
+    देते है। खुद ही अपने आप को समझा लेते हैं।<br><br>
+
+    <br><br>    क्या आपको पक्का समाधान चाहिए?
+    *तो पहले तो भीड़ का हिस्सा न बने।<br><br> क्योंकि भीड़ अपने सपने पूरे नहीं कर पाती।*<br><br> पूरे करना तो दूर, उनके सपने होते भी नहीं
+    है।<br><br> उन्हें तो ज़िंदगी पहले घुटनों पर ला चुकी है।<br><br> और उन्होंने 20 साल से लेकर 60 साल की उम्र तक काम करते रहने का मन
+    भी बना लिया है।<br><br>
+    <br><br>    *जब ज़्यादातर लोगो को डर लगे, वही मौका है हिम्मत दिखाने का।<br><br> आप अगले 12 महीनों में 6 लाख से 10 लाख रुपए कमा
+     सकते है। जी हां, मैं, आप ही की बात कर रहा हूं।*<br><br>
+    क्या इससे अच्छा जॉइनिंग पैकेज देखा आपने किसी और कंपनी में? प्रोडक्ट्स नेशनल ब्रैंड की मिलेगी।<br><br>
+    <br><br>    7000 + 10000 + 20000 का फायदा सिर्फ 3600 रुपए में।<br><br>
+    <br><br>    डायमंड पावर पैकेज – 3600 रुपए | 2000 BV | वैल्यूमार्ट डिस्काउंट क्रेडिट 10000 रुपए | 7000 के प्रोडक्ट्स/सर्विसिस
+    <br><br>    18 Products in just 3600 Rs. YOU GET
+    <br><br>    Valuemart Discount Credit of 10000 Rs | Tuver Dal (3Kg) | Rajbhog Basmati Rice (5Kg) | Tirupati
+    sunflower/ Groundnut/ Cottonseed Oil (2 Litre) | Sugar 5 Kg | Aashirwad or GOLD Aata 5 Kg |
+    Ramdev Garam Masala (200 gms) | Tata Agni/Wagh Bakri Tea 500 gms | Ramdev Dhaniya Powder
+    (200 gms) | Ramdev Mirchi (200 gms) | Ramdev Haldi (200gms) | Premium Mukhwas (4 Flavours x
+    250 gms) | Til (100 gms) | Jeera (200 gms) | Sarso (200 gms) | 2 Warming CUM Cooling Bag | 3
+    <br><br>    Massager | 3 Amritdhara | Power Marketing tools worth 20000 Rs | 2000 BV
+    आपकी सफलता का ट्रेलर देखना चाहेंगे? इस वीडियो ने हज़ारों लोगो को प्रेरणा दी है, क्योंकि हर ग्राहक अब सफल हो सकता
+    है।<br><br> कुछ भी नया नहीं करना है। अब सिस्टम आ चुका है ग्राहक को सफल बनाने वाला। सभी नेशनल ब्रैंड के प्रोडक्ट एक जगह
+    पर।<br><br>
+    <br><br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br>    <br><br><br><br>*{{z.firstname}} : {{z.phone}}*
+  </p>
+</div><br><br><br><button id="button1" onclick="CopyToClipboard('w24')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+<hr>
+<div id="w25" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>    <br><br>
+    यह प्लान 10 लोगो को दिखाओगे तो 9 लोग जॉइन करेंगे।<br><br>
+
+    <br><br>  *सिर्फ 100 रुपए लगाकर अगले 1 साल में 6 लाख से 10 लाख रूपए कमाओ।*<br><br>
+  <br><br>
+  *आपको रोडमैप टू सक्सेस गाइड मिलेगा। जिसे आप दुसरो से शेर करेंगे तो सामने से इन्क्वयरी करेंगे इम्पैक्ट में जॉइन होने के लिए।*<br><br>
+
+  <br><br>  100 बिज़नेस वॉल्यूम भी मिलेगा। आपकी आई.डी. कंपनी में एक्टिव हो जाएगी।<br><br>
+
+  <br><br>  *इम्पैक्ट बिज़नेस में घर में यूज़ होने वाले प्रोडक्ट्स मिलेंगे, वह भी नेशनल ब्रैंड्स के, जिसकी एड टी.वि. पर देखते रहते है। जैसे कि
+  आटा, हल्दी, मिर्ची, धनिया पाउडर, गुड़, बेसन, शक्कर, चाय, चावल, तेल, साबुन, मसाले, मैगी, हैल्थ बेस प्रोडक्ट्स वगैरह। मतलब
+  नुकसान की कोई गुंजाईश नहीं। पहले दिन से टेंशन फ्री।*<br><br>
+
+  <br><br>  इस कांसेप्ट में जॉइनिंग आसानी से मिलते है और हर महीने रीपर्चस भी अपने आप होता है। इसलिए पैसा लगातार, अपने आप आता
+  रहता है।<br><br>
+
+  आप पुरे देश में बिज़नेस फैलाकर सिक्योर और स्टेबल इनकम कमा सकते हो।<br><br>
+    <br><br>
+  मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br>
+  What’s App Group: <br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+    <br><br>
+  जॉइनिंग लिंक से जॉइन हो जाइए,
+    <br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+  सारा देश इम्पैक्ट से जुड़ रहा है। लीडर्स अब इम्पैक्ट की और रुख कर रहे है। क्यों?
+  <br><br>
+  क्योकि इम्पैक्ट बिज़नेस प्लान नेटवर्क मार्केटिंग में करियर बनाने के लिए सबसे अच्छा प्लान है।<br><br>
+
+  <br><br>  *मै पहले भी इम्पैक्ट करता था। आज भी इम्पैक्ट करता हूँ। और आगे भी इम्पैक्ट ही करूंगा।*<br><br>
+
+  <br><br>  *आपको बुरा लगे तो माफी चाहता हूं, लेकिन भारत का नम्बर 1 जॉइनिंग पैकेज इंपैक्ट का है।* 18 Products in just 4300 Rs.
+  YOU GET
+  <br><br>
+  ���� Valuemart Discount Credit of 10000 Rs - 2000 Rs ��������
+  <br><br>
+  <br><br>  ���� Tuver Dal (1 Kg) - 90 Rs������
+
+  ���� Masoor Dal (1 Kg) - 78 Rs����
+  <br><br>  ���� Sugar (2 Kg) - 74 Rs����
+  <br><br>  ���� Kabuli Chana (1 Kg) – 85 Rs
+
+  <br><br>  ���� Moong Dal (1 Kg) – 95 Rs
+
+  <br><br>  ���� TATA AGNI Tea 1 Kg - 220 Rs 
+
+  <br><br>  ���� Basmati Rice (5 Kg) – 325 Rs
+
+  <br><br>  ���� 2 Suhana Biriyani Masala - 80 Rs
+
+  ���� 4 Flavoured Mouth Freshners (250 gms x 4) - 600 Rs����
+  <br><br>
+  <br><br>  ���� Wagh Bakri Green Tea - 140 Rs����
+  <br><br>
+  ���� Abeel + Gulal + Sindoor + Rui + Kanku + Kapoor - 150 Rs����
+  <br><br>
+  ���� Dabur Toothpaste (200 gms x 2) - 160 Rs���� 
+  <br><br>
+  ���� Park Avenue Deo - 300 Rs 
+  <br><br>
+  ���� Ramdev Dhaniya Powder - 45 Rs 
+  <br><br>
+  ���� Uttam Sooji (500 gms) - 27 RS
+  <br><br>
+  �� 2 Massager - 300 Rs
+  <br><br>  ���� Navratna Chavana - 200 RS
+
+  <br><br>  ���� Hing (100gms) - 70 Rs
+
+  <br><br>  �� Til (100 gms) - 15 Rs ����
+  <br><br>
+  �� Paneer Tikka Masala - 40 Rs
+  <br><br>
+  �� 2 Warming cum Cooling Bag - 700 Rs��
+  <br><br>
+  �� 2 Amritdhara - 200 Rs
+  <br><br>
+  �� Business Building images worth 2000 Rs ��
+
+  <br><br>  �� Power Webpage worth 10000 Rs ��
+  <br><br>
+  �� 2 Personal Brand Videos worth 15000 Rs ��
+  <br><br>
+  �� Personal Brand eBook worth 200 Rs ��
+  <br><br>
+  �� Fast Growth Messages worth 200 Rs ��
+  <br><br>
+  *3000 BUSINESS VOLUME*
+
+  <br><br>  * अच्छे दिन बैठे रहने से नहीं आते है। उन्हें पाने के लिए बुरे दिनों से लड़ना पड़ता है।*<br><br>
+
+  <br><br>  कंपनी का मार्केटिंग सपोर्ट इतना स्ट्रांग है के लीडर्स तक दंग रह गए है। बिज़नेस अपने आप बढ़ता है। *ताकतवर का हाथ पकड़ लेने से
+  आप भी ताकतवर हो जाओगे।*<br><br>
+
+  <br><br>  *पुरे देश में बिज़नेस फ़ैलाने का रेडीमेड ऑटोमेटेड सिस्टम भी मिलेगा।*<br><br>
+
+  <br><br>  50000 Rs कैसे आएंगे अगले 3 से 6 महीने में??? बिलकुल आसान है।<br><br>
+
+  <br><br>  एक उदाहरण द्वारा प्लान शोर्ट में समझते है। जनरेशन प्लान है, बहोत ही अलग, और सबसे बेस्ट। वीडियो भी चेक कर सकते है।
+
+  <br><br>  मान लो आपके साथ 6 लोग जॉइन करते है और सभी का टर्नओवर 8000 BV है, तो आपके पहले महीने की इनकम हो जाती है,
+  15760 Rs की। यह सिर्फ ट्रेलर है। पिक्चर बाकी है।<br><br>
+
+  <br><br>  अगले महीने मान लो टीम के 6 लोगो ने सिर्फ 4 लोगो को जॉइन किया, तो टीम हो गई (6 x 4) 24 + 7 = 31 लोगो की। अगर सभी
+  का टर्नओवर 8000 BV रहा तो अगले महीने की इनकम *56880 Rs*
+
+    *याने आप दो महीनो में ही अगर फोकस के साथ काम कर लोगे तो 50000 की इनकम अचीव कर सकते हो.... सिर्फ 31 की टीम के
+  साथ।*<br><br>
+
+  <br><br>  कई लोगो ने ऐसा पैसा इम्पैक्ट से कमाया है। आप भी अपनी सक्सेस स्टोरी बना सकते है।<br><br>
+  <br><br>
+  अगर इससे बेहतर प्लान आपके पास हो, तो कृपया मेरा संपर्क करे तुरंत - {{z.phone}}
+  <br><br>
+  खुद अनुभव करो। *अगर आपको संतोष ना हो तो 15 दिन में बता दीजिएगा। मै आपके पैसे लौटा दूंगा।* अगर आपको विश्वास हो
+  और वाकई नेटवर्क मार्केटिंग में करियर सेट करना हो तो मेरे साथ बिज़नेस की शुरुआत करो।<br><br>
+
+  <br><br>  डेबिट कार्ड, क्रेडिट कार्ड, नेट बैंकिंग के सुविधा उपलब्ध है। निचे दिए गए लिंक पर क्लिक करे,
+
+  <br><br>  जॉइनिंग लिंक - <br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+
+  <br><br>  डाइरेक्ट बैंक एकाउंट में भी पैसा डाल सकते है। या फिर PAYTM भी कर सकते है।<br><br>
+  <br><br>
+  100 Rs से बेहतर है 700 Rs का पैकेज।<br><br>
+
+  <br><br>  700 Rs से बेहतर है 3600 Rs का पैकेज।<br><br>
+  <br><br>
+  3600 Rs से बेहतर है 11000 BV का पैकेज।<br><br>
+  <br><br>
+  11000 BV से बेहतर है 25000 BV का पैकेज।<br><br>
+  <br><br>
+  11000 बिज़नेस वॉल्यूम का पैकेज लो। कंपनी टर्नओवर का 10% पाओ 3 महीने तक एक येल्लो कार्ड पर।
+  <br><br>
+  *25000 बिज़नेस वॉल्यूम का पैकेज लो। कंपनी टर्नओवर का 10% पाओ 6 महीने तक। 3 ग्रीन कार्ड के साथ। मतलब और ज़्यादा
+  बेनिफिट। फूल वैल्यू के प्रोडक्ट्स तो मिल ही जाएंगे पहले दिन से।*<br><br>
+  <br><br>
+  <br><br>  टोटल कंपनी बिज़नेस वॉल्यूम का 74% बाँट देती है।<br><br>
+
+  <br><br>  - डाइरेक्ट जॉइनिंग इनकम - 8%
+  <br><br>  - डाइरेक्ट जॉइनिंग रिपर्चेस इनकम - 8%
+  <br><br>  - टीम जोइनिंग &amp; रिपर्चेस इनकम - 5% - 12% - 18% - 24%
+  <br><br>
+  मतलब अगर आप 12% पर हो तो एक 5000 BV के जॉइनिंग पर आपको मिलेगा 750 Rs
+  <br><br>
+  अगर आप 18% पर हो तो एक 50000 BV के जॉइनिंग पर आपको मिलेगा 1050 Rs
+
+  <br><br>  अगर आप 24% पर हो तो एक 5000 BV के जॉइनिंग पर आपको मिलेगा 1350 Rs
+
+  <br><br>  भविष्य में टीम दोबारा रिपर्चेस करेगी तो फिर से पैसा आता रहेगा।<br><br>
+
+  - स्मार्ट कस्टमर क्लब इनकम - 4% ऑफ़ कंपनी टर्नओवर
+  <br><br>  - पॉवर कस्टमर क्लब इनकम - 10% ऑफ़ कंपनी टर्नओवर
+  <br><br>  - लीडर्स क्लब टीम इनकम - 6% ऑफ़ कंपनी टर्नओवर
+  <br><br>  - मैनेजमेंट एक्सीलेंस बोनस - 15% ऑफ़ कंपनी टर्नओवर
+
+  <br><br>  - अपलाइन - बेस्ट डाउनलाइन पूल इनकम
+  <br><br>  - फ्रेंचाईज़ी इनकम 4%
+  <br><br>  - स्प्रिंट &amp; स्प्रिंटर वाउचर
+
+  <br><br>  बिज़नेस करो एक बार।पैसा कमाओ बार बार।
+  <br><br>  <a href="{{z.youtube2}}">{{z.youtube2}}</a>
+  <br><br>  *अमीरो के पास अमीर बनने के हज़ारो रास्ते है।<br><br> लेकिन गरीबों और मिडल क्लास के अमीर बनने के लिए एक ही रास्ता - मिशन
+  इम्पैक्ट।*<br><br>
+  <br><br>
+  *सीधा हिसाब है।आप किसी और कंपनी में 3600 भरोगे तो क्या प्रोडक्ट मिलेगा? बिज़नेस वॉल्यूम क्या
+  मिलेगा? खुद कम्पेयर कर लो और सत्य का स्वीकार करो।*<br><br> 
+  <br><br>
+  जॉइनिंग लिंक से जॉइन हो जाइए,
+  <br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+  <br><br>
+  {{z.phone}}
+  <br><br>  *TO STOP RECEIVING MESSAGE REPLY STOP*</p>
+  <br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w25')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w26" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>    नमस्कार।<br><br>
+    <br><br>
+    आपने इम्पैक्ट बिज़नेस देखा। अच्छा भी लगा। लेकिन शुरुआत करने से डर लग रहा है। है ना ?
+    <br><br>    आज तक बहोत से कंपनियों पर भरोसा किया। लेकिन नुकसान झेलना पडा। भरोसे के साथ खिलवाड़ हो गया।<br><br>
+
+    करियर और वक्त खराब हुआ। बार बार होता रहा। कहीं इम्पैक्ट भी ऐसा हुआ तो ???
+    <br><br>
+    *मन के ऐसे विचार बुद्धि पर ताला लगा देते है। और हम दिशा हीन होकर फिर से भटक जाते है।*<br><br>
+    <br><br>
+    आज तक दूसरे कंपनियों में आपके साथ जो हुआ सो हुआ। एक बात बताइए। उनमे से किस कंपनी ने आपको
+    जॉइनिंग के समय ....
+    <br><br>
+    *गुड़ दिया ??? वह भी मार्किट रेट से जो आजकल 55 Rs चल रही है ??? बताइए ???*
+    <br><br>    अरहर दाल दिया ??? वह भी मार्किट रेट से जो आजकल 90 Rs चल रही है ??? बताइए ???
+
+
+    <br><br>    रामदेव धनिया पाउडर दिया ??? वह भी मार्किट रेट से जो आजकल 45 Rs चल रही है ??? बताइए ???
+
+    <br><br>    शक्कर दिया ??? वह भी मार्किट रेट से जो आजकल 36 से 40 Rs चल रही है ??? बताइए ???
+
+    <br><br>    आटा दिया ??? वह भी मार्किट रेट से जो आजकल 165 Rs चल रही है ??? बताइए ???
+
+    <br><br>
+    वाघ बकरी चाय दिया ??? वह भी मार्किट रेट से जो आजकल 200 Rs/500 gm चल रही है ??? बताइए ???
+    <br><br>
+    *बताइए भाईसाब ??? दिया क्या?*
+    <br><br>    खोलने के लिए दस्तक दे रहा है, और आप शक कर रहे हो ???* इसकी तुलना दूसरे कंपनियों के श्रेणी में कर रहे
+    *और आज आपके और सभी के करियर के लिए वरदान रूप इम्पैक्ट बिज़नेस आपके अच्छे भविष्य के दरवाज़े को
+    <br><br>    हो ?
+
+    <br><br>    *यह अन्याय आप सिर्फ आप इम्पैक्ट के साथ ही नहीं, बल्कि अपने करियर के साथ कर रहे हो ?*
+    <br><br>
+    अगर इतना डर लग रहा हो, तो आप फिर से किसी हैल्थ प्रोडक्ट वाली कंपनी में शामिल हो जाइए। या फिर 100
+    रूपए लीटर खाने का तेल 150 से 195 रूपए लीटर में खरीदिये।<br><br>
+    <br><br>
+    जीवन डर कर नहीं जीया जाता। हर रोज़ रोड एक्सीडेंट में हज़ारो लोगो की मौत होती रहती है। तो क्या घर से
+    निकलना छोड़ देंगे ?
+    <br><br>
+    बहोत से लोगो की शादी के बाद जीवन में तनाव आ जाता है। कई लोगो के डिवोर्स भी हो जाते है। बहोत से
+    परिवार बिखर जाते है। तो क्या आप शादी ना करने की राय दोगे ? क्या खुद कुँवारे रहोगे?
+    <br><br>
+    डर और शंका आपको हरा दे, इससे पहले आप उन्हें हरा दो।
+    <br><br>
+    *जीत हटने से नहीं, डटने से मिलती है।*<br><br>
+    <br><br>
+    इम्पैक्ट बिज़नेस में नेशनल ब्रैंड के प्रोडक्ट्स मिलते है जो हर व्यक्ति पहले से ले रहा है। डिमांड पहले से है।
+    आपको सिर्फ प्रमोट करना है और पैसे कमाने है। रेडीमेड मार्केटिंग सिस्टम आपका टीम, और आपके टीम का टीम
+    बिल्ड करके देता है।<br><br>
+    <br><br>    बेसन, सूजी, मैदा, आटा, राजमा, काबुली चना, चावल, मसाले, दाल, चायपत्ती क्या आपके परिवार में नहीं लेते ? *इम्पैक्ट
+    बिज़नेस से इनकम हुई तो घर का सामान फ्री। बादमे आर्थिक स्वतंत्रता। सिर्फ 3 से 6 महीना मेहनत करने पर।*<br><br>
+    <br><br>    CALL *{{z.phone}}* for any queries!
+  </p>
+  <br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w26')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w27" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+<br><br>    *ज़्यादातर नेटवर्कर्स अहंकार और अज्ञान के कारण नहीं बढ़ पाते। उसे लगता है के उसे सब
+    <br><br>    आता है लेकिन सच्चाई इसके विपरीत होती है।*<br><br> 
+    97% नेटवर्कर्स स्टेज 1 भी पूरा नहीं करते। लेकिन सफल नेटवर्कर प्लान दिखाते रहता है और
+    स्टेज 4 तक जाता है।<br><br>  
+    स्टेज- 1 : नेटवर्कर 10 प्लान दिखाता है और 3 लोग जॉइन करते है। उसमे नॉलेज नहीं है।<br><br> 
+    स्टेज - 2 : नेटवर्कर 10 प्लान दिखाता है और 5 लोग ज्वाइन करते है क्योंकि उसका अनुभव
+        अब बढ़ गया है।<br><br>
+    स्टेज - 3 : नेटवर्कर 10 प्लान दिखाता है और 70 लोग ज्वाइन करते है। क्योंकि वो बड़े मीटिंग्स
+    करता है।<br><br> 
+    स्टेज - 4 : नेटवर्कर की सक्सेस, पर्स्नालिटी और इनकम देखकर लगभग सभी जॉइन करने लगते
+    है।<br><br>   
+    सावधान : *ज़्यादातर कंपनिया ऐसी है जिसमे आप स्टेज 4 तक चले भी जाओ तब भी आप
+    सफल नहीं हो सकते।* पैसिव इनकम नहीं कमा सकते। इसलिए हम इम्पैक्ट करने की सलाह
+        देते है।<br><br> 
+    यहाँ जॉइनिंग लोग आसानी से ले लेते है। रिपर्चेस भी हर महीने अपने आप होता है। इसलिए इनकम सिर्फ बढ़ता
+        है, घटता नहीं है। सिर्फ टीम को बढ़ाते रहने की ज़रूरत होती है। <br><br>
+    *नोट : इससे आसान काम आपको किसी और कंपनी में, या नौकरी में, या दूसरे व्यवसाय में नहीं मिलेगा। अगर
+    आप इम्पैक्ट बिज़नेस को एकाग्रता से काम करते रहे तो 3 से 6 महीनो में 50000 रुपए आसानी से कमा सकते
+        है।*<br><br> 
+    <br><br>    क्या इससे अच्छा जॉइनिंग पैकेज देखा आपने किसी और कंपनी में? प्रोडक्ट्स नेशनल ब्रैंड की मिलेगी।<br><br> 
+    7000 + 10000 + 25000 का फायदा सिर्फ 3600 रुपए में।<br><br>
+    मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br> What’s App Group:
+  <a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+    <br><br>    डायमंड पावर पैकेज - 3600 रुपए | 2000 BV | वैल्यूमार्ट डिस्काउंट क्रेडिट 10000 रुपए | 7000 के
+        प्रोडक्ट्स/सर्विसिस
+    <br><br>YOU GET
+    इम्पैक्ट किट पाकर लीडर्स कहते है मज़ा आ गया, घर भर दिया इम्पैक्ट ने। 18 Products in just 3600 Rs.
+    <br><br>
+    Valuemart Discount Credit of 10000 Rs | Tuver Dal (2 Kg) | Gulab sunflower Oil (2 Litre) | Sugar
+    4 Kg | Kanhaiya Aata 5 Kg | Dabur Toothpaste 200 gms | Suhana Garam Masala (100 gms) |
+    Tata Agni Tea 1 Kg | Navratna Namkeen 1 kg | Goodlife High Protein Soya Badi 1
+    Kg/Cornflakes 500 gms | Hing (100 gms) | Suhana Paneer Tikka Masala | Ramdev Mirchi (200
+    gms) | Ramdev Dhaniya (200gms) | Til (100 gms) | Jeera (200 gms) | Sarso (200 gms) | 2
+    Warming cum Cooling Bag + 3 Massager + 5 Amritdhara + Premium Mukhwas (250 gms x 4) |
+    2000 BV
+
+    <br><br>आपकी सफलता का ट्रेलर खुद देख लीजिए।<br><br>  
+    <br><br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+    <br><br>    हर महीने का खरीद आज तक पैसे देकर करते थे। लेकिन अगर राशन फ्री में आ जाए तो ???
+    <br><br>    अगर 6 लोग आपके साथ जुड़ते है, और आप खुद अगर एक बिज़नेस साइकल में हर कोई 8000 BV का काम
+    करते है, तो आपके पहले महीने की इनकम होगी 15760 रुपए।<br><br>  
+    <br><br>    हो गया न घर का राशन फ्री। अलग से पैसे भी मिले। मज़ा आया?!!! यह तो ट्रेलर है। पिक्चर अभी बाकी है। 
+    <br><br>    अगले महीने अगर आपके 6 दोस्तों से भी रहा न गया, और अगर वे बिज़नेस में चार लोगो को लाते है, तो 24 लोग
+    नए आए और पुराने 7 लोग, याने कुल 31 लोगो की टीम। अगर हर कोई 8000 BV का काम करता है तो *आपके
+    अगले महीने की इनकम होगी 56880 रुपए।*<br><br> 
+    <br><br>2 महीनो में 50000 की इनकम पर पहोंच गए। 6 महीने भी लग जाए तो क्या बुरा है ???
+
+
+  <br><br>  संपर्क करे : {{z.phone}} 
+
+<br><br>    जॉइनिंग लिंक :://<br><br><a href="{{z.joininglink}}">{{z.joininglink}}</a><br><br>
+    <br><br>    भुगतान आप क्रेडिट कार्ड, या डेबिट कार्ड या नेटबैंकिंग द्वारा कर सकते है।<br><br>
+  </p>
+  <br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w27')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w28" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>  <br><br>    इन्वेस्टमेंट प्लान से भी बेहतर।<br><br>
+    <br><br>  इम्पैक्ट बिज़नेस स्टार्टिंग विथ 100 Rs | 700 Rs | 3600 Rs | 4300 Rs | 8000 BV | 11000 BV | 25000 BV
+    <br><br>  SPECIAL BENEFIT FOR 1 + 1 = 11 CLUB MEMBERS
+    <br><br>  11000 बिज़नेस वॉल्यूम का पैकेज लो। कंपनी टर्नओवर का 10% पाओ 3 महीने तक।<br><br>
+    <br><br>  25000 बिज़नेस वॉल्यूम का पैकेज लो। कंपनी टर्नओवर का 10% पाओ 6 महीने तक। 3 गुना ज़्यादा फायदे के
+  साथ।<br><br>
+    <br><br>  घर में यूज़ होने वाले फूल वैल्यू के प्रोडक्ट्स मिलेंगे, नेशनल ब्रैंड्स के जिसकी एड टी.वि. पर देखते रहते है। *जैसे
+  कि आटा, हल्दी, मिर्ची, धनिया पाउडर, गुड़, बेसन, शक्कर, चाय, चावल, तेल, साबुन, मसाले, मैगी, हैल्थ बेस प्रोडक्ट्स
+    वगैरह। मतलब नुकसान की कोई गुंजाईश नहीं। पहले दिन से टेंशन फ्री।*
+  बिज़नेस प्लान एंड मार्केटिंग सपोर्ट बेस्ट।<br><br>
+    <br><br>  हर महीने रुपए आसानी से कमा सकते हो।<br><br>
+    <br><br>  *RUNNING SUCCESSFULLY IN MANY STATES!!!*
+    <br><br>  CALL {{z.phone}}
+  मिशन इम्पैक्ट ग्रुप को जॉइन करे और अगले सात दिन तक मैसेज ध्यान से पढ़े।<br><br> What’s App Group:
+    <br><br><br><a href="{{z.whtsapp}}">{{z.whtsapp}}</a><br><br>
+  <br><br>  बिज़नेस करो एक बार। पैसा कमाओ बार बार।<br><br>
+    <br><br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br>  <br><br>  *TO STOP RECEIVING MESSAGE REPLY STOP*</p>
+  <br><br>
+</div>
+<br><br><button id="button1" onclick="CopyToClipboard('w28')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+<hr>
+<div id="w29" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>    *झोला छाप डॉक्टरी करके करियर नहीं बनेगा* ��������
+    <br><br>    एक हैल्थ कंपनी के डिस्ट्रीब्यूटर ने एक मीटिंग की जिसमे कुछ लोगो को घुटनो की तकलीफ, डायबिटीस, ब्लड
+    प्रेशर जैसी समस्याएं थी।<br><br>
+    <br><br>    डिस्ट्रीब्यूटर ने कहा यह प्रोडक्ट्स बिलकुल ज़बरदस्त है आप सबकी तकलीफ दूर करने के लिए। वर्ल्ड क्लास, नंबर
+    1 प्रोडक्ट है। यह प्रोडक्ट लो, इस्तेमाल करो और आप ठीक हो जाओगे।<br><br>
+    <br><br>    उन लोगो ने सामने प्रोडक्ट की डिब्बी/बोतलें हाथ में ली। उस पर भाव देखा। 3500 रूपए / 2300 रूपए का प्रिंट
+    भाव था।<br><br>
+    <br><br>    *वे लोग डिस्ट्रीब्यूटर को देखकर मुस्कुराने लगे और बोले &quot;वाकई कमाल का प्रोडक्ट है आपकी कंपनी का।<br><br> हमारी
+    तकलीफें तो इसकी दाम देखकर ही ठीक हो गई।&quot;* ������������
+    <br><br>    दोस्तों, समझने वाली बात यह है की अगर प्रोडक्ट इतने ही अच्छे होते तो प्रधानमंत्री जी खुद खड़े होकर हम तक
+    <br><br>    सन्देश पहोंचा देते की यह चमत्कारी प्रोडक्ट इस्तेमाल करो और अपने रोग और बिमारिओ को भगाओ। ☺️☺️☺️
+    अस्पतालों में इतनी भीड़ नहीं होती। कोई बीमार न रहता। लेकिन वास्तविकता बहोत अलग है। जो डिस्ट्रीब्यूटरो को
+    सुनना पसंद नहीं है। 10 में से 2 लोगों को फायदा होता है, और 200 नए लोग उनकी बात सुनकर खरीदते है।
+        यही चक्र चलता रहता है।<br><br>������
+    *अगर बेचने वालो को इतना कॉन्फिडेंस होता, तो हर चौराहे पर दूकान होती और साफ़ लिखा होता की दर्द निवारण
+        ना हो, तो पैसे वापिस।*<br><br> ��������
+    लेकिन ऐसा है नहीं। इसका उल्टा होता है। *बॉटलो पर साफ़ लिखा होता है कि यह किसी भी तरह की दवाई नहीं
+        है और किसी भी तरह की बीमारी या रोग ठीक करने के लिए नहीं बनाई गई।* ������
+    व्यक्ति प्रोडक्ट्स लेता है ताकि उसकी समस्या दूर हो। लेकिन प्रोडक्ट्स नियमित लेने पर भी अगर किसी भी
+    कारण उसको रिसल्ट ना मिले, तो कोई उसे पैसे नहीं लौटाएगा। बाकी डिस्ट्रीब्यूटर जो करते है वो ब्रेनवॉश करने के
+    नुस्खे होते है।<br><br>
+    <br><br>    और यह नुस्खे भी किसी डिस्ट्रीब्यूटर को सफल करने के काम नहीं आए। *हाँ, कुछ महीनो या कुछ साल बाद
+    उनका करियर ज़रूर समाप्त हो गया।* और वे सभी कहाँ खो गए किसीको पता नहीं चला। ��������
+    <br><br>    <br><br>    कंपनी को नए लोग मिलते रहे। जो झोला छाप डॉक्टर बन गए।
+    कंपनी अपने प्रोडक्ट्स की मार्केटिंग व् बिक्री करते गए। और बड़े होते गए। *लेकिन नेटवर्कर हर बार खो गया।*
+        उसका करियर समाप्त।<br><br>
+    क्या कोई समाधान है ? जी हाँ।<br><br>
+    <br><br>    पहली बात तो यह की डॉक्टरी क्यों की डिस्ट्रीब्यूटर्स ने ? *पैसो के लिए ना ? तो ऐसा कहाँ लिखा है के पैसे
+    कमाने के लिए आपको झोला छाप डॉक्टर बनकर दुसरो के बीमारियों और रोगो को ठीक करने का सांत्वना देकर
+    लोगो को हैल्थ प्रोडक्ट्स बेचना पड़ेगा ?* प्रोडक्ट रिसल्ट लाए बिना भी तो सफल हो सकते हो।<br><br>
+    <br><br>    *साथियों, विटामिन A, बी, सी, डी, मिनरल, कैल्शियम, प्रोटीन वगैरह जो कंपनी बेच रहे है उन्हें उनका काम करने
+    दो। आप इस बात को समझो - अगर विटामिन एम (MONEY याने पैसा) होगा ना, तो बाकी सारे विटामिन
+    अपने आप आ जाएगा। इसलिए पहले विटामिन एम् का जुगाड़ करो। इम्पैक्ट बिज़नेस करो, यहाँ विटामिन एम्
+    बहोत ही अच्छे क्वालिटी का मिलता है। लीडरों ने चैक करके इसे लेना शुरू कर दिया है।*<br><br>
+    <br><br>    इम्पैक्ट में लोगो के रोज़मर्रा के प्रोडक्ट्स है। वो भी नेशनल ब्रैंड के।<br><br>
+    <br><br>    जैसे वाघ बकरी/टाटा अग्नि/ब्रुक बॉन्ड चाय, पतंजलि प्रोडक्ट्स, नेस्ले, आई.टी.सी. वगैरह। आटा, शक्कर, दाल,
+    चावल, बेसन, मैदा, गुड़, सूजी, पोहा वगैरह भी मिलते है। इन प्रोडक्ट्स की डिमांड पहले से है। हर व्यक्ति पहले से
+    ले रहा है। अगले महीने, सारा जीवन लेगा। आप सिर्फ उन्हें यह प्रोडक्ट्स पहुंचाकर पैसे कमा सकते हो।<br><br>
+    <br><br>    सिर्फ सिस्टम से जुडो, पैसा इतना आएगा के दंग रह जाओगे। लोगो को ब्रेनवॉश करना भूल जाओगे। यहाँ ज़रूरत
+    ही नहीं पड़ती। अपने आप लोग जॉइनिंग और रिपर्चेस करते है। घर बैठे पुरे भारत में बिज़नेस फैला सकते हो।<br><br>
+    <br><br>    सिर्फ मैसेज शेर करके, फॉरवर्ड करके, कॉपी पेस्ट करके आप हर रोज़ 500 से 5000 रूपए कमा सकते हो। इससे
+    आसान काम दूसरा कोई नहीं।<br><br>
+
+    <br><br>    इस वेबसाईट में शक्ति है आपके जीवन को हमेशा के लिए बदल देने की।<br><br> पूरा पढ़े और वीडियोस देखे,
+    <br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+    <br><br>    CALL *{{z.phone}}*<br><br>  </p>
+  <br><br></div>
+<br><br><button id="button1" onclick="CopyToClipboard('w29')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+<hr>
+<div id="w30" class="w3-container"><h5 class="w3-opacity"><b><br><br><a</b></h5>
+  <br><br>    *आपके सामने दो विकल्प है।*<br><br>
+<br><br>  1) 4 -5 अलग अलग फर्जी तरह की कम्पनियाँ बदलते रहो। 6 महीने से एक साल में अपना गुडविल खराब कर
+    लो और चुपके से अपना नेटवर्क मार्केटिंग करियर ख़तम कर दो।<br><br>
+  <br><br>  2) सबसे बेस्ट और लीगल कंपनी के साथ 3 से 6 महीने काम करो, हर महीने 50000 रुपये कमाओ और हमेशा
+    के लिए अपना करियर सेट कर लो। ������<br><br>    *सिर्फ 100 रुपए लगाओ। हर महीने 50000 रुपए कमाओ।*<br><br>
+    <br><br>भारत का नंबर 1 जोइनिंग पैकेज। भारत का नंबर 1 कम्पेन्सेशन प्लान। भारत का नंबर 1 मार्केटिंग सपोर्ट।<br><br>
+    6500 + 10000 + 25000 का फायदा सिर्फ 4300 रुपए में।<br><br>
+    डायमंड पावर पैकेज - 4300 रुपए | *3000 BV* | वैल्यूमार्ट डिस्काउंट क्रेडिट 10000 रुपए | 6500 Rs के
+    प्रोडक्ट्स/सर्विसिस
+<br><br>    *18 Products in just 3600 Rs* YOU GET
+    <br><br>    ���� Valuemart Discount Credit of 10000 Rs - 2000 Rs ��������
+<br><br>    ���� Tuver Dal (1 Kg) - 90 Rs������<br><br>
+    ���� Masoor Dal (1 Kg) - 78 Rs����<br><br>    ���� Sugar (2 Kg) - 74 Rs����<br><br>    ���� Kabuli Chana (1 Kg) – 85 Rs
+    <br><br>���� Chana Dal (1 Kg) – 95 Rs
+
+    <br><br>    <br><br>���� TATA AGNI Tea 1 Kg - 220 Rs 
+    ���� Basmati Rice (5 Kg) – 325 Rs
+    <br><br>    ���� 2 Suhana Biriyani Masala - 80 Rs
+    <br><br>    ���� 4 Flavoured Mouth Freshners (250 gms x 4) - 600 Rs����
+    <br><br>    ���� Wagh Bakri Green Tea - 140 Rs����
+    <br><br>    ���� Abeel + Gulal + Sindoor + Rui + Kanku + Kapoor - 150 Rs����
+    <br><br>    ���� Dabur Toothpaste (200 gms x 2) - 160 Rs���� 
+    <br><br>    ���� Park Avenue Deo - 300 Rs 
+    <br><br>    ���� Ramdev Dhaniya Powder - 45 Rs 
+    <br><br>    ���� Uttam Sooji (500 gms) - 27 RS
+    <br><br>    �� 2 Massager - 300 Rs
+    <br><br>    �� 2 Amritdhara - 200 Rs
+    <br><br>    ���� Navratna Chavana - 200 RS
+
+    <br><br>  ���� Hing (100gms) - 70 Rs
+    <br><br>�� Til (100 gms) - 15 Rs ����
+    <br><br>    �� Suhana Biriyani Masala - 40 Rs
+    <br><br>    �� 2 Warming cum Cooling Bag - 700 Rs��
+    <br><br>    �� Business Building images worth 2000 Rs ��
+
+    <br><br>    �� Power Webpage worth 10000 Rs ��
+    <br><br>    �� 2 Personal Brand Videos worth 15000 Rs ��
+  <br><br>  �� Personal Brand eBook worth 200 Rs ��
+    <br><br>    �� Fast Growth Messages worth 200 Rs ��
+    <br><br>    इस वीडियो में आपके ज़िंदगी को बदलने की शक्ति है,
+    <br><br><a href="{{z.youtube2}}">{{z.youtube2}}</a><br><br>    <br><br>    आपकी सफलता का ट्रेलर खुद देख लीजिए।<br><br>
+    <br><br><br><a href="{{z.youtube1}}">{{z.youtube1}}</a><br><br>
+    हर महीने का खरीद आज तक पैसे देकर करते थे।<br><br> *लेकिन अगर राशन फ्री में आ जाए तो ???*
+    अगर 6 लोग आपके साथ जुड़ते है, और आप खुद अगर एक बिज़नेस साइकल में हर कोई 8000 BV का काम
+    करते है, तो आपके पहले महीने की इनकम होगी 15760 रुपए।<br><br>
+    हो गया न घर का राशन फ्री। अलग से पैसे भी मिले। मज़ा आया?!!! यह तो ट्रेलर है। पिक्चर अभी बाकी है।
+    अगले महीने अगर आपके 6 दोस्तों से भी रहा न गया, और अगर वे बिज़नेस में चार लोगो को लाते है, तो 24
+    लोग नए आए और पुराने 7 लोग, याने कुल 31 लोगो की टीम। अगर हर कोई 8000 BV का काम करता है तो
+        आपके अगले महीने की इनकम होगी 56880 रुपए।<br><br>
+    2 महीनो में 50000 की इनकम पर पहोंच गए। 6 महीने भी लग जाए तो क्या बुरा है ???
+    *संपर्क करे : {{z.phone}}*
+    <br><br>We are SOCIAL! FOLLOW US on FACEBOOK!!!
+
+    <br><br>वीडियो यरफ़ोन लगाकर देख ले।<br><br>
+    <br><br>Facebook: www.iloveimpact.com/joinmissionimpact
+  <br><br>  Hindi Website
+    <br><br><br><a href="www.iloveimpact.com/hindi">www.iloveimpact.com/hindi</a><br><br>
+  </p>
+</div>
+<hr>
+<br><br><br><button id="button1" onclick="CopyToClipboard('w30')"><a href="javascript:history.go(0)">Click to copy</a><br><br></button>
+
+
+
+
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <br><br>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <br><br>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br><br></p>
+</footer>
+
+</body>
+</html>
